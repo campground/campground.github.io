@@ -1,0 +1,271 @@
+/* Campground theme for Tailwind CSS v4. Generated from tokens.json: edit the tokens, not this file.
+
+   In your app stylesheet:
+     @import "tailwindcss";
+     @import "./campground.css";
+   Copy the four files in fonts/ to ../fonts/ beside this file (or change the urls below).
+   Set the colourway on <html>: data-theme="green" (default) or data-theme="purple". */
+
+@font-face { font-family: "Arvo"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fonts/Arvo-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Arvo"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/Arvo-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Archivo"; font-weight: 100 900; font-style: normal; font-display: swap; src: url("../fonts/Archivo-Variable.woff2") format("woff2"); }
+@font-face { font-family: "Archivo Expanded"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/ArchivoExpanded-Bold.woff2") format("woff2"); }
+
+/* The colours, per colourway. Same names and values as the system's tokens.css. */
+:root, [data-theme="green"] {
+  --brand-50: #f0faf3;
+  --brand-100: #dff3e4;
+  --brand-200: #c2e5cc;
+  --brand-300: #99d0aa;
+  --brand-400: #65b280;
+  --brand-500: #1f7d49;
+  --brand-600: #006636;
+  --brand-700: #00522a;
+  --brand-800: #024121;
+  --brand-900: #013218;
+  --brand-950: #00230f;
+  --gray-50: #f6f7f4;
+  --gray-100: #eceee9;
+  --gray-200: #d9dcd5;
+  --gray-300: #c2c6c1;
+  --gray-400: #9a9ea3;
+  --gray-500: #666a70;
+  --gray-600: #5c5f66;
+  --gray-700: #4d5056;
+  --gray-800: #44474c;
+  --gray-900: #3d3f44;
+  --gray-950: #26282c;
+  --surface: var(--gray-50);
+  --surface-raised: #ffffff;
+  --surface-sunken: var(--gray-100);
+  --line: var(--gray-200);
+  --line-strong: #7d8186;
+  --ink: var(--gray-900);
+  --ink-muted: var(--gray-600);
+  --brand-deep: var(--brand-600);
+  --brand-deep-hover: var(--brand-700);
+  --brand-bright: #417703;
+  --brand-bright-inverse: #81bc55;
+  --brand-tint: var(--brand-100);
+  --on-brand-deep: #ffffff;
+  --on-brand-bright: #ffffff;
+  --surface-inverse: var(--gray-900);
+  --on-inverse: #ffffff;
+  --danger: #a8261d;
+  --danger-tint: #fbe9e7;
+  --link: var(--brand-deep);
+  --focus: var(--brand-deep);
+}
+[data-theme="purple"] {
+  --brand-50: #f5f6ff;
+  --brand-100: #eaebfe;
+  --brand-200: #d5d7fc;
+  --brand-300: #b9bbf3;
+  --brand-400: #9596df;
+  --brand-500: #45418a;
+  --brand-600: #332d70;
+  --brand-700: #28215f;
+  --brand-800: #1f184e;
+  --brand-900: #16103d;
+  --brand-950: #0d092b;
+  --gray-50: #f5f5f9;
+  --gray-100: #ebebf2;
+  --gray-200: #d9d9e4;
+  --gray-300: #c1c2d0;
+  --gray-400: #9799aa;
+  --gray-500: #62667a;
+  --gray-600: #555a6b;
+  --gray-700: #424656;
+  --gray-800: #333745;
+  --gray-900: #272a35;
+  --gray-950: #181a22;
+  --surface: var(--gray-50);
+  --surface-raised: #ffffff;
+  --surface-sunken: var(--gray-100);
+  --line: var(--gray-200);
+  --line-strong: #777b8c;
+  --ink: var(--gray-900);
+  --ink-muted: var(--gray-600);
+  --brand-deep: var(--brand-600);
+  --brand-deep-hover: var(--brand-700);
+  --brand-bright: #745ca5;
+  --brand-bright-inverse: #9e86d2;
+  --brand-tint: var(--brand-100);
+  --on-brand-deep: #ffffff;
+  --on-brand-bright: #ffffff;
+  --surface-inverse: var(--gray-900);
+  --on-inverse: #ffffff;
+  --danger: #a8261d;
+  --danger-tint: #fbe9e7;
+  --link: var(--brand-deep);
+  --focus: var(--brand-deep);
+}
+[data-theme="night"] {
+  --brand-50: #29235e;
+  --brand-100: #373175;
+  --brand-200: #4b488e;
+  --brand-300: #615fa7;
+  --brand-400: #7777c1;
+  --brand-500: #8f8fdb;
+  --brand-600: #a1a2ec;
+  --brand-700: #b4b6fa;
+  --brand-800: #caccff;
+  --brand-900: #e0e2fe;
+  --brand-950: #f0f1fe;
+  --gray-50: #131520;
+  --gray-100: #1b1e28;
+  --gray-200: #282b36;
+  --gray-300: #393d48;
+  --gray-400: #545864;
+  --gray-500: #8f929a;
+  --gray-600: #a2a4ad;
+  --gray-700: #bbbdc6;
+  --gray-800: #d5d7e0;
+  --gray-900: #ebeef7;
+  --gray-950: #f9faff;
+  --surface: var(--gray-50);
+  --surface-raised: #1b1e28;
+  --surface-sunken: var(--gray-200);
+  --line: var(--gray-300);
+  --line-strong: #6b6e7a;
+  --ink: var(--gray-900);
+  --ink-muted: var(--gray-700);
+  --brand-deep: var(--brand-600);
+  --brand-deep-hover: var(--brand-700);
+  --brand-bright: #caccff;
+  --brand-bright-inverse: #745ca5;
+  --brand-tint: var(--brand-100);
+  --on-brand-deep: #0d092b;
+  --on-brand-bright: #0d092b;
+  --surface-inverse: #f9faff;
+  --on-inverse: #181a22;
+  --danger: #ff8a80;
+  --danger-tint: #3a1512;
+  --link: var(--brand-deep);
+  --focus: var(--brand-deep);
+}
+
+/* Utilities point at the variables above, so bg-brand-600, text-ink, outline-line-strong follow the colourway. */
+@theme inline {
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  --color-gray-950: var(--gray-950);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-deep-hover: var(--brand-deep-hover);
+  --color-brand-bright: var(--brand-bright);
+  --color-brand-bright-inverse: var(--brand-bright-inverse);
+  --color-brand-tint: var(--brand-tint);
+  --color-on-brand-deep: var(--on-brand-deep);
+  --color-on-brand-bright: var(--on-brand-bright);
+  --color-surface-inverse: var(--surface-inverse);
+  --color-on-inverse: var(--on-inverse);
+  --color-danger: var(--danger);
+  --color-danger-tint: var(--danger-tint);
+  --color-link: var(--link);
+  --color-focus: var(--focus);
+
+  /* Tailwind UI ships with indigo as its accent: pasted markup is on-brand before you rename indigo- to brand-. */
+  --color-indigo-50: var(--brand-50);
+  --color-indigo-100: var(--brand-100);
+  --color-indigo-200: var(--brand-200);
+  --color-indigo-300: var(--brand-300);
+  --color-indigo-400: var(--brand-400);
+  --color-indigo-500: var(--brand-500);
+  --color-indigo-600: var(--brand-600);
+  --color-indigo-700: var(--brand-700);
+  --color-indigo-800: var(--brand-800);
+  --color-indigo-900: var(--brand-900);
+  --color-indigo-950: var(--brand-950);
+}
+
+@theme {
+  --font-display: "Arvo", Rockwell, Georgia, serif;
+  --font-sans: "Archivo", system-ui, sans-serif;
+  --font-label: "Archivo Expanded", "Archivo", system-ui, sans-serif;
+
+  --text-display-xl: 56px;
+  --text-display-xl--line-height: 60px;
+  --text-display-xl--font-weight: 400;
+  --text-display-xl--letter-spacing: -0.01em;
+  --text-display-lg: 40px;
+  --text-display-lg--line-height: 46px;
+  --text-display-lg--font-weight: 400;
+  --text-display-lg--letter-spacing: -0.01em;
+  --text-heading-lg: 28px;
+  --text-heading-lg--line-height: 34px;
+  --text-heading-lg--font-weight: 400;
+  --text-heading-md: 22px;
+  --text-heading-md--line-height: 28px;
+  --text-heading-md--font-weight: 700;
+  --text-heading-sm: 18px;
+  --text-heading-sm--line-height: 24px;
+  --text-heading-sm--font-weight: 700;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+  --text-body: 16px;
+  --text-body--line-height: 24px;
+  --text-body--font-weight: 400;
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--font-weight: 400;
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+  --text-caption--font-weight: 500;
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--font-weight: 700;
+  --text-label-lg--letter-spacing: 0.12em;
+  --text-label: 12px;
+  --text-label--line-height: 16px;
+  --text-label--font-weight: 700;
+  --text-label--letter-spacing: 0.12em;
+
+  --shadow-raised: 0 1px 2px rgba(39, 42, 53, 0.08), 0 4px 12px rgba(39, 42, 53, 0.08);
+
+  /* Spacing and radius need nothing here: space-N is Tailwind step N (4px base), radius-xs and radius-sm are Tailwind's own rounded-xs (2px) and rounded-sm (4px). Use nothing rounder. */
+}
+
+@layer base {
+  html { font-family: var(--font-sans); color: var(--ink); background-color: var(--surface); }
+}
+
+/* Theme variants: night:… applies inside data-theme="night" (a purple-theme variant likewise). */
+@custom-variant night (&:where([data-theme="night"], [data-theme="night"] *));
+@custom-variant purple (&:where([data-theme="purple"], [data-theme="purple"] *));
+
+/* The topography ground (Hero Patterns, MIT): a faint contour field behind a section. Colour and strength follow the theme;
+   override with --topo-ink and --topo-opacity. Keep the opacity under .1 so text still reads against the flat surface. */
+@utility bg-topo {
+  position: relative; isolation: isolate;
+  &::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background-color: var(--topo-ink, var(--brand-600)); opacity: var(--topo-opacity, .06);
+    mask-image: url("../patterns/topography.svg"); mask-size: 600px 600px; mask-repeat: repeat; }
+}
+[data-theme="night"] { --topo-ink: var(--brand-bright); --topo-opacity: .08; }
