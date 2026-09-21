@@ -1,6 +1,6 @@
 # campground.github.io
 
-Source for <https://campground.github.io>, built by GitHub Pages with Jekyll.
+Source for <https://www.campgrounddd.com>, built by GitHub Pages with Jekyll.
 
 ## How it publishes
 
