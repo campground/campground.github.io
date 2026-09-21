@@ -1,13 +1,28 @@
 # GitHub Pages + Jekyll site settings
 # https://docs.github.com/en/pages/quickstart
-theme: jekyll-theme-minimal
+# No gem theme: layouts live in _layouts/, CSS comes from Tailwind.
+theme: null
 title: Campground
-description: Campground's home on GitHub Pages.
+tagline: Digital agency and consultancy
+description: >-
+  Campground is a full-service digital agency and consultancy. We build web and
+  mobile applications and automate workflows with AI.
+logo: /assets/logos/Campground-Digital-Green.png
+lang: en
 url: https://www.campgrounddd.com
 baseurl: ""
+
+# Both ship with the github-pages gem. jekyll-sitemap also emits robots.txt.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - PRODUCT.md
+  - node_modules
+  - package.json
+  - package-lock.json
   - vendor

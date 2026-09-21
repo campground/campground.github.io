@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/*
+ * Campground theme. Brand anchors are the exact logo colors (see PRODUCT.md);
+ * the steps around them are a generated starting point — tune by eye.
+ * Use these scales in place of Tailwind UI's indigo/gray defaults.
+ */
+@theme {
+  /* Primary: logo dark green, anchored at 700 */
+  --color-pine-50: oklch(0.98 0.02 154);
+  --color-pine-100: oklch(0.96 0.04 154);
+  --color-pine-200: oklch(0.92 0.07 154);
+  --color-pine-300: oklch(0.86 0.1 154);
+  --color-pine-400: oklch(0.76 0.13 154);
+  --color-pine-500: oklch(0.66 0.14 154);
+  --color-pine-600: oklch(0.55 0.13 154);
+  --color-pine-700: #006636;
+  --color-pine-800: oklch(0.37 0.095 154);
+  --color-pine-900: oklch(0.3 0.075 154);
+  --color-pine-950: oklch(0.22 0.055 154);
+
+  /* Secondary: logo light green, anchored at 500. Fails AA as text on white. */
+  --color-moss-50: oklch(0.98 0.03 133.6);
+  --color-moss-100: oklch(0.96 0.06 133.6);
+  --color-moss-200: oklch(0.92 0.1 133.6);
+  --color-moss-300: oklch(0.87 0.13 133.6);
+  --color-moss-400: oklch(0.78 0.15 133.6);
+  --color-moss-500: #70aa43;
+  --color-moss-600: oklch(0.57 0.14 133.6);
+  --color-moss-700: oklch(0.47 0.12 133.6);
+  --color-moss-800: oklch(0.39 0.1 133.6);
+  --color-moss-900: oklch(0.32 0.08 133.6);
+  --color-moss-950: oklch(0.23 0.06 133.6);
+
+  /* Accent: logo purples, anchored at 500 and 800 */
+  --color-grape-50: oklch(0.98 0.015 292);
+  --color-grape-100: oklch(0.95 0.03 292);
+  --color-grape-200: oklch(0.9 0.06 292);
+  --color-grape-300: oklch(0.82 0.09 292);
+  --color-grape-400: oklch(0.68 0.11 292);
+  --color-grape-500: #775fa8;
+  --color-grape-600: oklch(0.46 0.12 290);
+  --color-grape-700: oklch(0.4 0.115 286);
+  --color-grape-800: #332d70;
+  --color-grape-900: oklch(0.28 0.09 283);
+  --color-grape-950: oklch(0.21 0.07 283);
+
+  /* Neutral: wordmark grays, anchored at 700 and 800 */
+  --color-ink-50: oklch(0.985 0.002 270);
+  --color-ink-100: oklch(0.967 0.003 270);
+  --color-ink-200: oklch(0.925 0.005 270);
+  --color-ink-300: oklch(0.87 0.007 270);
+  --color-ink-400: oklch(0.71 0.01 270);
+  --color-ink-500: oklch(0.55 0.012 270);
+  --color-ink-600: oklch(0.45 0.012 270);
+  --color-ink-700: #3d3f44;
+  --color-ink-800: #272a35;
+  --color-ink-900: oklch(0.21 0.02 270);
+  --color-ink-950: oklch(0.15 0.018 270);
+}
