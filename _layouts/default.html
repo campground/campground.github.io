@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="icon" href="{{ '/assets/logos/Campground-Icon-Green.png' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body class="bg-ink-50 text-ink-800 antialiased">
+    <header class="mx-auto max-w-5xl px-6 py-8">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/logos/Campground-Digital-Green.png' | relative_url }}" alt="Campground Digital" width="1650" height="680" class="h-16 w-auto">
+      </a>
+    </header>
+    <main class="mx-auto max-w-5xl px-6 pb-24">
+      {{ content }}
+    </main>
+  </body>
+</html>
