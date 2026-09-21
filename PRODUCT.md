@@ -75,23 +75,26 @@ Colors sampled from the logo files:
 | Light         | `#70aa43`           | `#775fa8`           |
 | Wordmark text | `#3d3f44`           | `#272a35`           |
 
-These anchor the Tailwind scales in `_tailwind/site.css`: `pine` (primary),
-`moss` (secondary), `grape` (accent), `ink` (neutral).
-
-The type pairing to echo: rounded slab serif for display, wide geometric sans
-for labels. The logo typefaces themselves are not identified yet.
+The logo typefaces are not identified; the web pairing that echoes them is
+Arvo (display), Archivo (body) and Archivo Expanded Bold (labels), self-hosted
+in `assets/fonts/` under the OFL.
 
 ## Design system and tooling
+
+- **Campground Design System** (claude.ai artifact,
+  <https://claude.ai/artifact/4LqjCesA8rLnPqGdk9bucq>) is the source of truth:
+  tokens, green/purple/night themes, re-skinned Tailwind UI blocks, logos,
+  illustrations, the topography pattern and site copy. Its generated stylesheet
+  is vendored at `_tailwind/campground.css`; read its README before designing.
 
 - **Tailwind CSS** with **Tailwind UI** (Pro account, signed in via the
   browser) as the component starting point. Use the HTML variants; this is a
   static Jekyll site, not React.
 - **Heroicons** for icons, **Hero Patterns** for background texture.
-- **Build our own theme.** Tailwind UI supplies structure, not the look. Define
-  Campground tokens in the Tailwind theme (brand color scales built out from
-  the logo colors above, display and body fonts, radius, shadows) and restyle
-  every component with them. A page that reads as stock Tailwind UI is a
-  failure: default indigo, default gray scale, and unmodified marketing blocks
+- **Build our own theme.** Tailwind UI supplies structure, not the look. Use
+  the design system's tokens (`brand-*`, `surface`, `ink`, `font-display`,
+  `text-label` …) and its re-skin swaps on every component. A page that reads
+  as stock Tailwind UI is a failure: default indigo, default gray scale, and unmodified marketing blocks
   are all out.
 
 ## Anti-references
@@ -120,4 +123,4 @@ for labels. The logo typefaces themselves are not identified yet.
 - Contact path: email link, form, or booking link.
 - Logo typefaces, if known, and whether to license them for the web.
 
-No `DESIGN.md` yet — write it once the theme is tuned and the first pages ship.
+No `DESIGN.md`: the design system artifact above fills that role.

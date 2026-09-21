@@ -9,6 +9,8 @@ description: >-
   mobile applications and automate workflows with AI.
 logo: /assets/logos/Campground-Digital-Green.png
 lang: en
+# Contact address used by every "Start a project" link.
+email: hello@campgrounddd.com
 url: https://www.campgrounddd.com
 baseurl: ""
 

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="t"><title id="t">A tent under a night sky, lantern lit</title>
+<style>.sky{fill:var(--illo-sky,#131520)}.ground{fill:var(--illo-ground,#1b1e28)}.contour{fill:none;stroke:var(--illo-contour,#4b488e);stroke-width:2}.tent{fill:var(--illo-tent,#a1a2ec)}.tent2{fill:var(--illo-tent2,#615fa7)}.glow{fill:var(--illo-glow,#f0f1fe)}.star{fill:var(--illo-star,#e0e2fe)}.peak{fill:var(--illo-peak,#29235e)}.peak2{fill:var(--illo-peak2,#373175)}.line{fill:none;stroke:var(--illo-tent,#a1a2ec);stroke-width:2}</style>
+<rect class="sky" width="640" height="360"/>
+<g class="star"><polygon points="62,44 66,50 62,56 58,50"/><polygon points="142,18 145,22 142,26 139,22"/><polygon points="212,66 216,72 212,78 208,72"/><polygon points="332,26 335,30 332,34 329,30"/><polygon points="422,54 426,60 422,66 418,60"/><polygon points="522,22 525,26 522,30 519,26"/><polygon points="592,80 596,86 592,92 588,86"/><polygon points="472,106 475,110 472,114 469,110"/><polygon points="102,116 105,120 102,124 99,120"/><polygon points="282,108 285,112 282,116 279,112"/><polygon points="372,84 380,96 372,108 364,96"/></g>
+<polygon class="star" points="548,36 572,36 588,52 588,76 572,92 548,92 532,76 532,52"/><polygon class="sky" points="556,30 580,30 596,46 596,70 580,86 556,86 540,70 540,46"/>
+<polygon class="peak" points="0,240 110,120 200,200 290,140 400,240"/>
+<polygon class="peak2" points="280,240 430,110 540,190 640,150 640,240"/>
+<rect class="ground" y="240" width="640" height="120"/>
+<path class="contour" d="M0 272 C 120 252, 200 302, 320 282 S 520 262, 640 292"/>
+<path class="contour" d="M0 312 C 140 292, 240 342, 360 318 S 540 302, 640 332"/>
+<path class="line" d="M200 250 L 160 292 M440 250 L 480 292"/>
+<polygon class="tent" points="200,250 320,110 440,250"/>
+<polygon class="tent2" points="320,110 440,250 320,250"/>
+<polygon class="glow" points="296,250 320,176 344,250"/>
+<rect class="tent2" x="316" y="96" width="8" height="16"/>
+<rect class="ground" x="150" y="250" width="340" height="6"/>
+</svg>

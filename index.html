@@ -1,0 +1,132 @@
+---
+layout: default
+title: Software design, development and AI automation
+---
+
+{%- assign btn = "inline-flex min-h-11 items-center justify-center rounded-xs bg-brand-600 px-6 font-label text-label text-on-brand-deep uppercase hover:bg-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600" -%}
+
+<!-- Hero -->
+<section class="bg-topo bg-surface">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-16 gap-y-16 px-6 py-24 sm:py-32 lg:grid-cols-12 lg:items-end lg:px-8">
+    <div class="lg:col-span-8">
+      <p class="font-label text-label-lg text-brand-bright uppercase">Design + development + AI</p>
+      <h1 class="mt-6 font-display text-5xl font-normal tracking-tight text-balance text-ink sm:text-7xl">software that holds up in the field</h1>
+      <p class="mt-8 max-w-2xl text-body-lg text-pretty text-ink-muted sm:text-xl/8">Campground Digital is a full-service agency. We take products from first sketch to production and keep them running: strategy, design, engineering, content management and the AI that makes them smarter.</p>
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <a href="#contact" class="{{ btn }}">Start a project</a>
+        <a href="#services" class="text-body font-semibold text-ink hover:text-brand-600">See what we do <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+
+    <!-- Trail marker: the facts a skimming buyer wants, in the descriptor voice -->
+    <dl class="border border-line bg-surface-raised lg:col-span-4">
+      <div class="px-6 py-5">
+        <dt class="font-label text-label text-brand-bright uppercase">Stack</dt>
+        <dd class="mt-1 text-body text-ink">Rails, React, React Native, Elixir</dd>
+      </div>
+      <div class="border-t border-line px-6 py-5">
+        <dt class="font-label text-label text-brand-bright uppercase">Cadence</dt>
+        <dd class="mt-1 text-body text-ink">Working software every two weeks</dd>
+      </div>
+      <div class="border-t border-line px-6 py-5">
+        <dt class="font-label text-label text-brand-bright uppercase">Team</dt>
+        <dd class="mt-1 text-body text-ink">Senior people, no account layer</dd>
+      </div>
+      <div class="border-t border-line px-6 py-5">
+        <dt class="font-label text-label text-brand-bright uppercase">Reply time</dt>
+        <dd class="mt-1 text-body text-ink">One working day</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- Services: day, packed backpack -->
+<section id="services" class="border-t border-line bg-surface-raised">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-24 sm:py-32 lg:grid-cols-2 lg:px-8">
+    <img src="{{ '/assets/illustrations/backpack-flat.svg' | relative_url }}" alt="A hiking backpack packed with a laptop, a map and a pole" width="360" height="400" loading="lazy" class="w-72 justify-self-center lg:order-first lg:w-96">
+    <div>
+      <h2 class="font-label text-label-lg text-brand-bright uppercase">What we do</h2>
+      <p class="mt-2 font-display text-display-lg text-ink">Pack everything you need.</p>
+      <p class="mt-6 text-body-lg text-ink-muted">One team, the whole lifecycle. Take what the project needs and leave the rest.</p>
+      <dl class="mt-8">
+        <div class="border-t border-line py-4">
+          <dt class="font-label text-label text-brand-bright uppercase">Strategy + design</dt>
+          <dd class="mt-1 text-body text-ink-muted">Discovery, product definition and interface design. We find the shortest path from idea to something people can use.</dd>
+        </div>
+        <div class="border-t border-line py-4">
+          <dt class="font-label text-label text-brand-bright uppercase">Engineering</dt>
+          <dd class="mt-1 text-body text-ink-muted">Web, mobile and backend, built to last. Rails, TypeScript and React on the web; React Native for iOS and Android; Elixir where uptime and scale matter most.</dd>
+        </div>
+        <div class="border-t border-line py-4">
+          <dt class="font-label text-label text-brand-bright uppercase">Content management</dt>
+          <dd class="mt-1 text-body text-ink-muted">Sites and products your team can update without a developer.</dd>
+        </div>
+        <div class="border-t border-line py-4">
+          <dt class="font-label text-label text-brand-bright uppercase">AI automation + optimization</dt>
+          <dd class="mt-1 text-body text-ink-muted">Practical AI inside your product and your operations: workflows that run themselves, and measurement to prove it.</dd>
+        </div>
+        <div class="border-y border-line py-4">
+          <dt class="font-label text-label text-brand-bright uppercase">Run + improve</dt>
+          <dd class="mt-1 text-body text-ink-muted">Launch isn't the end. We monitor, maintain and keep shipping.</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- How we work -->
+<section id="how-we-work" class="border-t border-line bg-surface">
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+    <div class="max-w-2xl">
+      <h2 class="font-label text-label-lg text-brand-bright uppercase">How we work</h2>
+      <p class="mt-2 font-display text-display-lg text-ink">Small teams, senior people</p>
+      <p class="mt-6 text-body-lg text-ink-muted">You work directly with the people building your product: no handoffs, no account layer.</p>
+    </div>
+    <ol class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+      <li class="border-t-2 border-brand-600 pt-6">
+        <p class="font-label text-label text-brand-bright uppercase">01</p>
+        <h3 class="mt-3 font-display text-heading-md text-ink">Discovery sprint</h3>
+        <p class="mt-3 text-body text-ink-muted">Every engagement starts short. You know the scope, the cost and the first milestone before you commit to more.</p>
+      </li>
+      <li class="border-t-2 border-brand-600 pt-6">
+        <p class="font-label text-label text-brand-bright uppercase">02</p>
+        <h3 class="mt-3 font-display text-heading-md text-ink">Two-week increments</h3>
+        <p class="mt-3 text-body text-ink-muted">We ship in increments you can see and use, not status decks. Change course whenever the work tells you to.</p>
+      </li>
+      <li class="border-t-2 border-brand-600 pt-6">
+        <p class="font-label text-label text-brand-bright uppercase">03</p>
+        <h3 class="mt-3 font-display text-heading-md text-ink">Launch, then stay</h3>
+        <p class="mt-3 text-body text-ink-muted">The team that built it keeps it running: monitoring, maintenance and the next release.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Run + improve: night band -->
+<section id="run-improve" data-theme="night" class="bg-topo bg-surface">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-24 sm:py-32 lg:grid-cols-2 lg:px-8">
+    <div>
+      <h2 class="font-label text-label-lg text-brand-bright uppercase">Run + improve</h2>
+      <p class="mt-2 font-display text-display-lg text-ink">Sleep at night. We're on watch.</p>
+      <p class="mt-6 text-body-lg text-ink-muted">Once a product ships, Campground keeps it running: monitoring, on-call, maintenance and the next release. If something breaks at 3am, it's our pager, not yours.</p>
+      <div class="mt-10">
+        <a href="#contact" class="{{ btn }}">Start a project</a>
+      </div>
+    </div>
+    <img src="{{ '/assets/illustrations/tent-flat.svg' | relative_url }}" alt="A tent under a night sky, lantern lit" width="640" height="360" loading="lazy" class="w-full max-w-xl justify-self-center">
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-brand-700">
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+    <div class="max-w-2xl">
+      <h2 class="font-display text-4xl font-normal tracking-tight text-balance text-on-brand-deep sm:text-5xl">Have a project in mind? Let's talk it through.</h2>
+      <p class="mt-6 max-w-xl text-lg/8 text-pretty text-on-brand-deep">Tell us what you're building and where it's stuck. We'll reply within one working day with an honest read on scope and next steps.</p>
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <a href="mailto:{{ site.email }}?subject=New%20project" class="inline-flex min-h-11 items-center rounded-xs bg-surface-raised px-6 font-label text-label text-brand-600 uppercase hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface-raised">Start a project</a>
+        <a href="mailto:{{ site.email }}" class="text-body font-semibold text-on-brand-deep underline underline-offset-4">{{ site.email }}</a>
+      </div>
+    </div>
+  </div>
+</section>
