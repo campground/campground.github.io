@@ -1,0 +1,13 @@
+# GitHub Pages + Jekyll site settings
+# https://docs.github.com/en/pages/quickstart
+theme: jekyll-theme-minimal
+title: Campground
+description: Campground's home on GitHub Pages.
+url: https://campground.github.io
+baseurl: ""
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
