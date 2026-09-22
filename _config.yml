@@ -20,6 +20,9 @@ plugins:
   - jekyll-sitemap
 
 exclude:
+  # Plate masters and prompt sidecars stay in the repo for provenance; only the WebP plates ship.
+  - assets/plates/*.json
+  - assets/plates/*.png
   - Gemfile
   - Gemfile.lock
   - README.md

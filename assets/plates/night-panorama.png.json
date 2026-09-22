@@ -1,0 +1,11 @@
+{
+  "prompt": "Recreate the reference illustration as the same campsite at night, same composition and same drawing style: a wide flat vector panorama with faceted hard-edged peaks and a dense treeline of simple triangular conifers rising diagonally on the right to two thirds of the height, a low treeline and a still lake with reflections across the bottom, one small A-frame tent and a thin thread of campfire smoke on the shore right of center. Flat fills only, no outlines, no gradients, no texture, no painterly softness.\nNight palette only: peaks in indigo #29235e and #373175 with a lighter facet in #4b488e, treeline in near-black #131520 and #1b1e28, ground #1b1e28, lake #131520 with thin ripple lines in #4b488e and pale star reflections in #615fa7, the tent glowing from inside in periwinkle #a1a2ec with a bright #f0f1fe doorway and a small warm campfire glow in #caccff, smoke in #615fa7. A scattering of small four-point stars in #e0e2fe and a thin crescent moon in the upper right sky. The sky itself is fully transparent alpha (no color, no gradient); stars and moon sit alone on the transparent sky.\nNo text, no labels, no people, no frame. Output at 3072 by 1408 with genuine transparent alpha.\n",
+  "createdAt": "2026-09-22T05:07:01.574Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    "assets/plates/panorama.png"
+  ]
+}

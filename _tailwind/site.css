@@ -7,3 +7,13 @@
  * bg-topo's 120KB base64 mask-image is swapped for assets/patterns/topography.svg.
  */
 @import "./campground.css";
+
+@layer base {
+  /* Anchors land below the sticky header. */
+  section[id] { scroll-margin-top: 6rem; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  /* Browser surfaces follow the colourway. */
+  ::selection { background-color: var(--brand-100); color: var(--ink); }
+  :focus-visible { outline-color: var(--focus); }
+}

@@ -14,3 +14,7 @@ assets/css/site.css
 # Impeccable live-mode session state (config.json is kept)
 .impeccable/live/*
 !.impeccable/live/config.json
+
+# Impeccable build-phase state and review captures (session artifacts)
+.impeccable/build/
+.impeccable/review/
