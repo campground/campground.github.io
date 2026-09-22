@@ -6,54 +6,33 @@ title: Software design, development and AI automation
 {%- assign btn = "inline-flex min-h-11 items-center justify-center rounded-xs bg-brand-600 px-6 font-label text-label text-on-brand-deep uppercase hover:bg-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600" -%}
 {%- assign link = "inline-flex min-h-11 items-center text-body font-semibold text-ink hover:text-brand-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600" -%}
 
-<!-- Hero -->
-<section class="bg-topo bg-surface">
-  <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-16 gap-y-16 px-6 py-24 sm:py-32 lg:grid-cols-12 lg:items-end lg:px-8">
-    <div class="lg:col-span-8">
-      <p class="font-label text-label-lg text-brand-bright uppercase">Design + development + AI</p>
-      <h1 class="mt-6 font-display text-5xl font-normal tracking-tight text-balance text-ink sm:text-7xl">software that holds up in the field</h1>
-      <p class="mt-8 max-w-2xl text-body-lg text-pretty text-ink-muted">Campground Digital is a full-service agency. We take products from first sketch to production and keep them running: strategy, design, engineering and the AI that makes them smarter.</p>
-      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-        <a href="#contact" class="{{ btn }}">Start a project</a>
-        <a href="#services" class="{{ link }}">See what we do <span aria-hidden="true">&rarr;</span></a>
+<!-- Hero: morning. The daylight panorama is the ground the words stand on. -->
+<section class="relative isolate overflow-hidden bg-surface lg:min-h-[924px]">
+  <div class="relative z-10 mx-auto max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] px-6 pb-8 lg:px-0 lg:pt-[6.5vw] lg:pb-0">
+    <div class="max-w-[860px] pt-14 sm:pt-20 lg:pt-0">
+      <p class="font-label text-[15px]/none font-bold tracking-[0.14em] text-brand-bright uppercase lg:text-[19px]/none">Design + development + AI</p>
+      <h1 class="mt-5 font-display text-[clamp(44px,5.2vw,80px)]/[1.03] font-normal tracking-[-0.035em] text-balance text-ink">software that holds up in the field</h1>
+      <p class="mt-8 max-w-[760px] text-[18px]/[1.5] text-pretty text-ink-muted lg:text-[21px]/[1.45]">Campground Digital is a full-service agency. We take products from first sketch to production and keep them running: strategy, design, engineering and the AI that makes them smarter.</p>
+      <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <a href="#contact" class="inline-flex h-[54px] items-center justify-center rounded-xs bg-brand-600 px-8 font-label text-[15px] font-bold tracking-[0.12em] text-on-brand-deep uppercase hover:bg-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">Start a project</a>
+        <a href="#services" class="inline-flex min-h-11 items-center text-[18px] font-semibold text-ink hover:text-brand-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">See what we do <span aria-hidden="true">&nbsp;&rarr;</span></a>
       </div>
     </div>
-
-    <!-- Trail marker: the facts a skimming buyer wants, in the descriptor voice -->
-    <dl class="border border-line bg-surface-raised lg:col-span-4">
-      <div class="px-6 py-5">
-        <dt class="font-label text-label text-brand-bright uppercase">Stack</dt>
-        <dd class="mt-1 text-body text-ink">Rails, React, React Native, Elixir</dd>
-      </div>
-      <div class="border-t border-line px-6 py-5">
-        <dt class="font-label text-label text-brand-bright uppercase">Cadence</dt>
-        <dd class="mt-1 text-body text-ink">Working software every two weeks</dd>
-      </div>
-      <div class="border-t border-line px-6 py-5">
-        <dt class="font-label text-label text-brand-bright uppercase">Team</dt>
-        <dd class="mt-1 text-body text-ink">Senior people, no account layer</dd>
-      </div>
-      <div class="border-t border-line px-6 py-5">
-        <dt class="font-label text-label text-brand-bright uppercase">Reply time</dt>
-        <dd class="mt-1 text-body text-ink">One working day</dd>
-      </div>
-    </dl>
   </div>
+  <img src="{{ '/assets/plates/panorama.webp' | relative_url }}" alt="" width="2560" height="1173" fetchpriority="high" decoding="async" class="pointer-events-none mt-10 h-[260px] w-full object-cover object-[72%_100%] sm:h-[340px] lg:absolute lg:inset-x-0 lg:bottom-0 lg:z-0 lg:mt-0 lg:h-[704px] lg:object-bottom">
 </section>
 
-<!-- Services: day, packed backpack -->
+<!-- Services: the gear, laid out. -->
 <section id="services" class="border-t border-line bg-surface-raised">
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] px-6 py-24 sm:py-32 lg:px-0">
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
       <div class="lg:col-span-7">
         <p class="font-label text-label-lg text-brand-bright uppercase">What we do</p>
         <h2 class="mt-2 font-display text-display-lg text-ink">Pack everything you need.</h2>
         <p class="mt-6 max-w-2xl text-body-lg text-ink-muted">One team, the whole lifecycle: strategy, design, engineering and the AI that makes them smarter. Take what the project needs and leave the rest.</p>
       </div>
-      <div class="bg-topo border border-line bg-surface p-8 lg:col-span-5 lg:justify-self-end">
-
-        <img src="{{ '/assets/illustrations/backpack-flat.svg' | relative_url }}" alt="A hiking backpack packed with a laptop, a map and a pole" width="360" height="400" loading="lazy" class="mx-auto w-56 lg:w-64">
-
+      <div class="bg-topo border border-line bg-surface p-6 sm:p-8 lg:col-span-5 lg:justify-self-end">
+        <img src="{{ '/assets/plates/flatlay.webp' | relative_url }}" alt="A tent seen from above with six pieces of gear laid out around it: a trail map and compass, a laptop, a lantern, a coiled rope, a field notebook and a tool roll" width="960" height="960" loading="lazy" decoding="async" class="mx-auto w-full max-w-[440px]">
       </div>
     </div>
     <dl class="mt-16 grid grid-cols-1 gap-x-12 border-b border-line md:grid-cols-2">
@@ -86,8 +65,9 @@ title: Software design, development and AI automation
 </section>
 
 <!-- Expertise: the tools on the packing list -->
+{%- assign tool = "flex min-w-24 flex-col items-center gap-2.5 text-center text-ink" -%}
 <section id="expertise" class="border-t border-line bg-surface-sunken">
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] px-6 py-24 sm:py-32 lg:px-0">
     <div class="max-w-2xl">
       <p class="font-label text-label-lg text-brand-bright uppercase">Expertise</p>
       <h2 class="mt-2 font-display text-display-lg text-ink">A short packing list, on purpose.</h2>
@@ -98,10 +78,10 @@ title: Software design, development and AI automation
         <dt class="font-label text-label text-brand-bright uppercase md:col-span-3 md:pt-1">Application stack</dt>
         <dd class="md:col-span-9">
           <ul class="flex flex-wrap gap-x-10 gap-y-6">
-          <li class="flex min-w-24 flex-col items-start gap-2.5 text-ink"><span class="[&>svg]:h-8">{% include logos/rails.svg %}</span><span class="text-body-sm font-semibold">Ruby on Rails</span></li>
-          <li class="flex min-w-24 flex-col items-start gap-2.5 text-ink"><span class="[&>svg]:h-8">{% include logos/react.svg %}</span><span class="text-body-sm font-semibold">React</span></li>
-          <li class="flex min-w-24 flex-col items-start gap-2.5 text-ink"><span class="[&>svg]:h-8">{% include logos/react-native.svg %}</span><span class="text-body-sm font-semibold">React Native</span></li>
-          <li class="flex min-w-24 flex-col items-start gap-2.5 text-ink"><span class="[&>svg]:h-8">{% include logos/elixir.svg %}</span><span class="text-body-sm font-semibold">Elixir</span></li>
+            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/rails.svg %}</span><span class="text-body-sm font-semibold">Ruby on Rails</span></li>
+            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/react.svg %}</span><span class="text-body-sm font-semibold">React</span></li>
+            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/react-native.svg %}</span><span class="text-body-sm font-semibold">React Native</span></li>
+            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/elixir.svg %}</span><span class="text-body-sm font-semibold">Elixir</span></li>
           </ul>
         </dd>
       </div>
@@ -109,10 +89,10 @@ title: Software design, development and AI automation
         <dt class="font-label text-label text-brand-bright uppercase md:col-span-3 md:pt-1">Cloud + hosting</dt>
         <dd class="md:col-span-9">
           <ul class="flex flex-wrap gap-x-10 gap-y-6">
-          <li class="flex min-w-24 flex-col items-start gap-2.5 text-ink"><span class="[&>svg]:h-8">{% include logos/flyio.svg %}</span><span class="text-body-sm font-semibold">Fly.io</span></li>
-          <li class="flex min-w-24 flex-col items-start gap-2.5 text-ink"><span class="[&>svg]:h-8">{% include logos/aws.svg %}</span><span class="text-body-sm font-semibold">AWS</span></li>
-          <li class="flex min-w-24 flex-col items-start gap-2.5 text-ink"><span class="[&>svg]:h-8">{% include logos/azure.svg %}</span><span class="text-body-sm font-semibold">Azure</span></li>
-          <li class="flex min-w-24 flex-col items-start gap-2.5 text-ink"><span class="[&>svg]:h-8">{% include logos/heroku.svg %}</span><span class="text-body-sm font-semibold">Heroku</span></li>
+            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/flyio.svg %}</span><span class="text-body-sm font-semibold">Fly.io</span></li>
+            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/aws.svg %}</span><span class="text-body-sm font-semibold">AWS</span></li>
+            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/azure.svg %}</span><span class="text-body-sm font-semibold">Azure</span></li>
+            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/heroku.svg %}</span><span class="text-body-sm font-semibold">Heroku</span></li>
           </ul>
         </dd>
       </div>
@@ -120,56 +100,90 @@ title: Software design, development and AI automation
   </div>
 </section>
 
-<!-- How we work -->
-<section id="how-we-work" class="border-t border-line bg-surface">
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-    <div class="max-w-2xl">
+<!-- How we work: dusk. The purple colourway's first appearance, as a timeline rail. -->
+{%- assign step = "relative pl-10 before:absolute before:top-1.5 before:left-0 before:size-3 before:bg-brand-600 after:absolute after:top-1.5 after:-bottom-12 after:left-[5px] after:w-0.5 after:bg-brand-600 last:after:hidden" -%}
+<section id="how-we-work" data-theme="purple" class="border-t border-line bg-surface">
+  <div class="mx-auto grid max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] grid-cols-1 gap-x-12 gap-y-16 px-6 py-24 sm:py-32 lg:grid-cols-12 lg:px-0">
+    <div class="lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
       <p class="font-label text-label-lg text-brand-bright uppercase">How we work</p>
       <h2 class="mt-2 font-display text-display-lg text-ink">Small teams, senior people.</h2>
       <p class="mt-6 text-body-lg text-ink-muted">You work directly with the people building your product: no handoffs, no account layer.</p>
     </div>
-    <ol class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-      <li class="border-t-2 border-brand-600 pt-6">
+    <ol class="space-y-12 lg:col-span-8 lg:col-start-5">
+      <li class="{{ step }}">
         <p class="font-label text-label text-brand-bright uppercase">01</p>
         <h3 class="mt-3 font-display text-heading-md text-ink">Discovery sprint</h3>
-        <p class="mt-3 text-body text-ink-muted">Every engagement starts short. You know the scope, the cost and the first milestone before you commit to more.</p>
+        <p class="mt-3 max-w-xl text-body text-ink-muted">Every engagement starts short. You know the scope, the cost and the first milestone before you commit to more.</p>
       </li>
-      <li class="border-t-2 border-brand-600 pt-6">
+      <li class="{{ step }}">
         <p class="font-label text-label text-brand-bright uppercase">02</p>
         <h3 class="mt-3 font-display text-heading-md text-ink">Two-week increments</h3>
-        <p class="mt-3 text-body text-ink-muted">We ship in increments you can see and use, not status decks. Change course whenever the work tells you to.</p>
+        <p class="mt-3 max-w-xl text-body text-ink-muted">We ship in increments you can see and use, not status decks. Change course whenever the work tells you to.</p>
       </li>
-      <li class="border-t-2 border-brand-600 pt-6">
+      <li class="{{ step }}">
         <p class="font-label text-label text-brand-bright uppercase">03</p>
         <h3 class="mt-3 font-display text-heading-md text-ink">Launch, then stay</h3>
-        <p class="mt-3 text-body text-ink-muted">No handoff to a support desk. The people who built it stay on it, and the next release is already on the map.</p>
+        <p class="mt-3 max-w-xl text-body text-ink-muted">No handoff to a support desk. The people who built it stay on it, and the next release is already on the map.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- Run + improve: night band -->
-<section id="run-improve" data-theme="night" class="bg-topo bg-surface">
-  <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-24 sm:py-32 lg:grid-cols-2 lg:px-8">
-    <div>
+<!-- Clients -->
+{%- assign client = "flex flex-col border-t border-line py-6 md:border-t-0 md:border-l md:py-2 md:pl-6 md:first:border-l-0 md:first:pl-0" -%}
+<section id="clients" class="border-t border-line bg-surface-raised">
+  <div class="mx-auto grid max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] grid-cols-1 gap-x-12 gap-y-12 px-6 py-24 sm:py-32 lg:grid-cols-12 lg:px-0">
+    <div class="lg:col-span-3">
+      <p class="font-label text-label-lg text-brand-bright uppercase">Clients</p>
+      <h2 class="mt-2 font-display text-display-lg text-ink">Good company.</h2>
+    </div>
+    <ul class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-b md:border-line md:py-6 lg:col-span-9 lg:grid-cols-[1fr_1fr_1fr_auto]">
+      <li class="{{ client }}">
+        <span class="h-9 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/parker-palm-springs.svg %}</span>
+        <h3 class="mt-6 font-display text-heading-md text-ink">Parker Palm Springs</h3>
+        <p class="mt-2 text-body text-ink-muted">Web Application + CMS</p>
+      </li>
+      <li class="{{ client }}">
+        <span class="h-9 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/ward-village.svg %}</span>
+        <h3 class="mt-6 font-display text-heading-md text-ink">Ward Village</h3>
+        <p class="mt-2 text-body text-ink-muted">Web Application + CMS</p>
+      </li>
+      <li class="{{ client }}">
+        <span role="img" aria-label="Gramercy Park Hotel" class="block h-9 w-[92px] bg-ink [mask:url('/assets/logos/clients/gramercy-park-hotel.png')_left_center/contain_no-repeat]"></span>
+        <h3 class="mt-6 font-display text-heading-md text-ink">Gramercy Park Hotel</h3>
+        <p class="mt-2 text-body text-ink-muted">Web Application + CMS</p>
+      </li>
+      <li class="mt-8 border border-line bg-surface p-6 md:col-span-3 md:mt-6 lg:col-span-1 lg:mt-0 lg:ml-6 lg:w-64">
+        <p class="font-label text-label text-brand-bright uppercase">Next</p>
+        <p class="mt-2 text-body text-ink">Have a project in mind?</p>
+        <a href="#contact" class="{{ btn }} mt-6 w-full whitespace-nowrap">Start a project</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Run + improve: night. -->
+<section id="run-improve" data-theme="night" class="relative isolate overflow-hidden border-t border-line bg-surface lg:min-h-[800px]">
+  <div class="relative z-10 mx-auto max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] px-6 pt-24 sm:pt-32 lg:px-0 lg:pb-[360px]">
+    <div class="max-w-xl">
       <p class="font-label text-label-lg text-brand-bright uppercase">Run + improve</p>
-      <h2 class="mt-2 font-display text-display-lg text-ink">Sleep at night. We're on watch.</h2>
+      <h2 class="mt-2 font-display text-display-lg text-balance text-ink">Sleep at night. We're on watch.</h2>
       <p class="mt-6 text-body-lg text-ink-muted">Once a product ships, we watch it: uptime and error monitoring around the clock, and an engineer on call who already knows the code. If something breaks at 3am, it's our pager, not yours.</p>
       <div class="mt-10">
         <a href="#contact" class="{{ btn }}">Start a project</a>
       </div>
     </div>
-    <img src="{{ '/assets/illustrations/tent-flat.svg' | relative_url }}" alt="A tent under a night sky, lantern lit" width="640" height="360" loading="lazy" class="w-full max-w-xl justify-self-center border border-line">
   </div>
+  <img src="{{ '/assets/plates/night-panorama.webp' | relative_url }}" alt="" width="3072" height="1408" loading="lazy" decoding="async" class="pointer-events-none h-[260px] w-full object-cover object-[75%_100%] sm:h-[340px] lg:absolute lg:inset-x-0 lg:bottom-0 lg:z-0 lg:h-[560px] lg:object-bottom">
 </section>
 
-<!-- Contact -->
-<section id="contact" class="bg-brand-700">
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-    <div class="max-w-2xl">
-      <p class="font-label text-label-lg text-on-brand-deep uppercase">Contact</p>
-      <h2 class="mt-2 font-display text-display-lg text-balance text-on-brand-deep">Have a project in mind? Let's talk it through.</h2>
-      <p class="mt-6 max-w-xl text-body-lg text-pretty text-on-brand-deep">Tell us what you're building and where it's stuck. We'll reply within one working day with an honest read on scope and next steps.</p>
+<!-- Manifesto + contact: dusk purple, the one drenched band, the only topo field. -->
+<section id="contact" data-theme="purple" class="bg-topo bg-brand-600" style="--topo-ink: #caccff; --topo-opacity: .08">
+  <div class="mx-auto max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] px-6 py-24 sm:py-32 lg:px-0">
+    <div class="max-w-3xl">
+      <p class="font-label text-label-lg text-brand-200 uppercase">Manifesto</p>
+      <h2 class="mt-4 font-display text-[clamp(36px,4.2vw,64px)]/[1.1] tracking-[-0.01em] text-balance text-on-brand-deep">We believe the future is something we can build together.</h2>
+      <p class="mt-8 max-w-xl text-body-lg text-pretty text-brand-100">Tell us what you're building and where it's stuck. We'll reply within one working day with an honest read on scope and next steps.</p>
       <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
         <a href="mailto:{{ site.email }}?subject=New%20project" class="inline-flex min-h-11 items-center rounded-xs bg-surface-raised px-6 font-label text-label text-brand-600 uppercase hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface-raised">Start a project</a>
         <a href="mailto:{{ site.email }}" class="inline-flex min-h-11 items-center text-body font-semibold text-on-brand-deep underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface-raised">{{ site.email }}</a>

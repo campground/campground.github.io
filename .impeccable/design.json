@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-22T01:58:24Z",
+  "generatedAt": "2026-09-21T23:30:00Z",
   "title": "Design System: Campground",
   "extensions": {
     "colorMeta": {
@@ -11,10 +11,18 @@
       "moss": { "role": "secondary", "displayName": "Moss", "canonical": "#417703", "tonalRamp": ["#142600", "#1f3a00", "#2c5100", "#366400", "#417703", "#5f9a1f", "#81bc55", "#dff3c8"] },
       "moss-inverse": { "role": "secondary", "displayName": "Moss, inverse", "canonical": "#81bc55" },
       "dusk": { "role": "tertiary", "displayName": "Dusk", "canonical": "#332d70", "tonalRamp": ["#0d092b", "#16103d", "#1f184e", "#28215f", "#332d70", "#45418a", "#9596df", "#eaebfe"] },
+      "dusk-hover": { "role": "tertiary", "displayName": "Dusk, pressed", "canonical": "#28215f" },
+      "dusk-label": { "role": "tertiary", "displayName": "Dusk Label", "canonical": "#745ca5" },
+      "dusk-pale": { "role": "tertiary", "displayName": "Dusk Pale", "canonical": "#d5d7fc" },
+      "dusk-tint": { "role": "tertiary", "displayName": "Dusk Tint", "canonical": "#eaebfe" },
+      "dusk-wash": { "role": "tertiary", "displayName": "Dusk Wash", "canonical": "#f5f6ff" },
       "lantern": { "role": "tertiary", "displayName": "Lantern", "canonical": "#a1a2ec", "tonalRamp": ["#29235e", "#373175", "#4b488e", "#615fa7", "#7777c1", "#8f8fdb", "#a1a2ec", "#e0e2fe"] },
       "lantern-bright": { "role": "tertiary", "displayName": "Lantern Bright", "canonical": "#caccff" },
-      "night-ground": { "role": "neutral", "displayName": "Night Ground", "canonical": "#131520" },
+      "ember": { "role": "tertiary", "displayName": "Ember", "canonical": "#ff8a80" },
+      "night-ground": { "role": "neutral", "displayName": "Night Ground", "canonical": "#131520", "tonalRamp": ["#131520", "#1b1e28", "#282b36", "#393d48", "#545864", "#8f929a", "#bbbdc6", "#ebeef7"] },
       "night-raised": { "role": "neutral", "displayName": "Night Raised", "canonical": "#1b1e28" },
+      "night-line": { "role": "neutral", "displayName": "Night Line", "canonical": "#393d48" },
+      "night-muted": { "role": "neutral", "displayName": "Night Muted", "canonical": "#bbbdc6" },
       "night-ink": { "role": "neutral", "displayName": "Night Ink", "canonical": "#ebeef7" },
       "granite": { "role": "neutral", "displayName": "Granite", "canonical": "#3d3f44", "tonalRamp": ["#26282c", "#3d3f44", "#44474c", "#4d5056", "#5c5f66", "#666a70", "#9a9ea3", "#d9dcd5"] },
       "granite-muted": { "role": "neutral", "displayName": "Granite Muted", "canonical": "#5c5f66" },
@@ -27,47 +35,70 @@
       "danger-tint": { "role": "danger", "displayName": "Danger Tint", "canonical": "#fbe9e7" }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Page-level headline, lowercase, one per page." },
+      "display": { "displayName": "Display", "purpose": "Page-level headline, lowercase, one per page. The hero runs clamp(44px, 5.2vw, 80px) at 1.03 and -0.035em; the manifesto runs clamp(36px, 4.2vw, 64px) at 1.1." },
       "headline": { "displayName": "Headline", "purpose": "Section titles, one per section." },
-      "title": { "displayName": "Title", "purpose": "Step and card titles; the only bold Arvo." },
-      "body-lg": { "displayName": "Body Large", "purpose": "Section lead paragraphs in Granite Muted." },
-      "body": { "displayName": "Body", "purpose": "Descriptions, list entries, links." },
-      "body-sm": { "displayName": "Body Small", "purpose": "Nav links and footer." },
-      "label-lg": { "displayName": "Label Large", "purpose": "Section eyebrows in Moss." },
-      "label": { "displayName": "Label", "purpose": "Fact labels, step numerals, button text." }
+      "title": { "displayName": "Title", "purpose": "Step titles and client names; the only bold Arvo." },
+      "body-lg": { "displayName": "Body Large", "purpose": "Section lead paragraphs in Granite Muted; the hero lead runs 18/21px." },
+      "body": { "displayName": "Body", "purpose": "Descriptions, list entries, header nav links (semibold), the arrow link." },
+      "body-sm": { "displayName": "Body Small", "purpose": "Technology names, footer text and footer links." },
+      "label-lg": { "displayName": "Label Large", "purpose": "Section eyebrows in the theme's label token; the hero eyebrow runs 15/19px." },
+      "label": { "displayName": "Label", "purpose": "Fact labels, step numerals, panel eyebrows, button text." }
     },
     "shadows": [
-      { "name": "raised", "value": "0 1px 2px rgba(39, 42, 53, 0.08), 0 4px 12px rgba(39, 42, 53, 0.08)", "purpose": "Reserved for elements that float over content (menu, dialog). Unused in flow." }
+      { "name": "raised", "value": "0 1px 2px rgba(39, 42, 53, 0.08), 0 4px 12px rgba(39, 42, 53, 0.08)", "purpose": "Reserved for elements that float over content (menu, dialog). Unused in flow; the mobile disclosure menu is in flow and uses a Line instead." }
     ],
-    "motion": [],
+    "motion": [
+      { "name": "nav-marker", "value": "opacity 150ms", "purpose": "The active-section marker fades in under the nav link. Removed under prefers-reduced-motion." },
+      { "name": "scroll", "value": "scroll-behavior: smooth", "purpose": "Anchor navigation; falls back to auto under prefers-reduced-motion." }
+    ],
     "breakpoints": [
       { "name": "sm", "value": "640px" },
       { "name": "md", "value": "768px" },
       { "name": "lg", "value": "1024px" },
       { "name": "xl", "value": "1280px" }
     ],
+    "container": { "belowLg": "max-width 1424px, 24px gutters", "fromLg": "width 87.5%, max-width 1600px, no padding" },
     "themes": [
-      { "name": "green", "selector": ":root, [data-theme=\"green\"]", "purpose": "Default colourway." },
-      { "name": "purple", "selector": "[data-theme=\"purple\"]", "purpose": "Accent colourway; defined, not yet used on the site." },
-      { "name": "night", "selector": "[data-theme=\"night\"]", "purpose": "Per-section night band, not a user dark mode." }
-    ]
+      { "name": "green", "selector": ":root, [data-theme=\"green\"]", "purpose": "Default colourway: hero, services, expertise, clients." },
+      { "name": "purple", "selector": "[data-theme=\"purple\"]", "purpose": "Dusk: the timeline section (accent) and the manifesto band (drench)." },
+      { "name": "night", "selector": "[data-theme=\"night\"]", "purpose": "Per-section night: the run + improve band and the footer. Not a user dark mode." }
+    ],
+    "topo": { "utility": "bg-topo", "opacity": { "light": 0.06, "duskAndNight": 0.08 }, "uses": ["#contact (manifesto): --topo-ink #caccff at .08", "services bordered panel: Pine at .06"] },
+    "illustration": {
+      "look": "flat, faceted, hard-edged vector look; palette of the host section; sky left transparent so the band surface shows",
+      "format": "WebP at 2x layout size with intrinsic width/height; PNG masters and .json prompt sidecars beside them, excluded from the build",
+      "plates": [
+        { "file": "assets/plates/panorama.webp", "section": "hero", "layout": "absolute bottom, 704px tall from lg; 260/340px in-flow strip below lg", "loading": "eager, fetchpriority=high, preloaded" },
+        { "file": "assets/plates/flatlay.webp", "section": "services panel", "layout": "in flow, max 440px wide, transparent ground on Birch + topo", "loading": "lazy, real alt" },
+        { "file": "assets/plates/night-panorama.webp", "section": "run + improve", "layout": "absolute bottom, 560px tall from lg; 260/340px strip below lg", "loading": "lazy" }
+      ],
+      "retired": ["assets/illustrations/tent-flat.svg", "assets/illustrations/backpack-flat.svg"]
+    }
   },
   "components": [
     {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The one call to action, repeated verbatim: Pine fill, wide uppercase label, 2px corners.",
+      "description": "The one call to action, repeated verbatim: Pine fill, wide uppercase label, 2px corners. 44px in flow, 48/52px in the header, 54px in the hero.",
       "html": "<button class=\"ds-btn-primary\">Start a project</button>",
       "css": ".ds-btn-primary { display: inline-flex; align-items: center; min-height: 44px; padding: 0 24px; background: #006636; color: #ffffff; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; } .ds-btn-primary:hover { background: #00522a; } .ds-btn-primary:focus-visible { outline: 2px solid #006636; outline-offset: 2px; }"
+    },
+    {
+      "name": "Hero Button",
+      "kind": "button",
+      "refersTo": "button-hero",
+      "description": "The primary button at hero scale: 54px tall, 32px padding, 15px label.",
+      "html": "<button class=\"ds-btn-hero\">Start a project</button>",
+      "css": ".ds-btn-hero { display: inline-flex; align-items: center; height: 54px; padding: 0 32px; background: #006636; color: #ffffff; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; } .ds-btn-hero:hover { background: #00522a; } .ds-btn-hero:focus-visible { outline: 2px solid #006636; outline-offset: 2px; }"
     },
     {
       "name": "Inverse Button",
       "kind": "button",
       "refersTo": "button-inverse",
-      "description": "The primary button on the Pine contact band: white fill, Pine text.",
+      "description": "The primary button on the Dusk manifesto band: white fill, Dusk text, hovers to Dusk Wash.",
       "html": "<div class=\"ds-band\"><button class=\"ds-btn-inverse\">Start a project</button></div>",
-      "css": ".ds-band { background: #00522a; padding: 24px; } .ds-btn-inverse { display: inline-flex; align-items: center; min-height: 44px; padding: 0 24px; background: #ffffff; color: #006636; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; } .ds-btn-inverse:hover { background: #f0faf3; } .ds-btn-inverse:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; }"
+      "css": ".ds-band { background: #332d70; padding: 24px; } .ds-btn-inverse { display: inline-flex; align-items: center; min-height: 44px; padding: 0 24px; background: #ffffff; color: #332d70; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; } .ds-btn-inverse:hover { background: #f5f6ff; } .ds-btn-inverse:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; }"
     },
     {
       "name": "Text Link",
@@ -75,92 +106,114 @@
       "refersTo": "nav-link",
       "description": "The quiet second action beside a button: semibold Granite with a trailing arrow, hovering to Pine.",
       "html": "<a href=\"#\" class=\"ds-link\">See what we do <span aria-hidden=\"true\">&rarr;</span></a>",
-      "css": ".ds-link { font-family: Archivo, system-ui, sans-serif; font-size: 16px; line-height: 24px; font-weight: 600; color: #3d3f44; text-decoration: none; } .ds-link:hover { color: #006636; } .ds-link:focus-visible { outline: 2px solid #006636; outline-offset: 2px; }"
+      "css": ".ds-link { display: inline-flex; align-items: center; min-height: 44px; font-family: Archivo, system-ui, sans-serif; font-size: 16px; line-height: 24px; font-weight: 600; color: #3d3f44; text-decoration: none; } .ds-link:hover { color: #006636; } .ds-link:focus-visible { outline: 2px solid #006636; outline-offset: 2px; }"
     },
     {
       "name": "Navigation",
       "kind": "nav",
       "refersTo": "nav-link",
-      "description": "White bar under a hairline: wordmark left, three semibold links, primary button right.",
-      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">campground</span><span class=\"ds-nav-links\"><a href=\"#\">Services</a><a href=\"#\">How we work</a><a href=\"#\">Run + improve</a></span><button class=\"ds-nav-cta\">Start a project</button></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 24px; background: #ffffff; border-bottom: 1px solid #d9dcd5; } .ds-nav-brand { font-family: Arvo, Rockwell, Georgia, serif; font-size: 22px; color: #3d3f44; } .ds-nav-links { display: flex; gap: 40px; } .ds-nav-links a { font-family: Archivo, system-ui, sans-serif; font-size: 14px; line-height: 24px; font-weight: 600; color: #3d3f44; text-decoration: none; } .ds-nav-links a:hover { color: #006636; } .ds-nav-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; background: #006636; color: #ffffff; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; white-space: nowrap; } .ds-nav-cta:hover { background: #00522a; }"
+      "description": "Sticky white bar under a hairline: lockup left, five semibold links with a 2px Pine marker under the active one, primary button right.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">campground</span><span class=\"ds-nav-links\"><a href=\"#\" aria-current=\"true\">Services</a><a href=\"#\">Expertise</a><a href=\"#\">How we work</a><a href=\"#\">Clients</a><a href=\"#\">Run + improve</a></span><button class=\"ds-nav-cta\">Start a project</button></nav>",
+      "css": ".ds-nav { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 32px; height: 80px; padding: 0 24px; background: #ffffff; border-bottom: 1px solid #d9dcd5; } .ds-nav-brand { font-family: Arvo, Rockwell, Georgia, serif; font-size: 22px; color: #3d3f44; } .ds-nav-links { display: flex; gap: 40px; } .ds-nav-links a { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; font-family: Archivo, system-ui, sans-serif; font-size: 16px; line-height: 24px; font-weight: 600; color: #3d3f44; text-decoration: none; } .ds-nav-links a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #006636; opacity: 0; transition: opacity 150ms; } .ds-nav-links a[aria-current=\"true\"]::after { opacity: 1; } .ds-nav-links a:hover { color: #006636; } .ds-nav-links a:focus-visible { outline: 2px solid #006636; outline-offset: 2px; } .ds-nav-cta { display: inline-flex; align-items: center; height: 48px; padding: 0 24px; background: #006636; color: #ffffff; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; white-space: nowrap; } .ds-nav-cta:hover { background: #00522a; } @media (prefers-reduced-motion: reduce) { .ds-nav-links a::after { transition: none; } }"
     },
     {
-      "name": "Spec Panel",
+      "name": "Bordered Panel",
       "kind": "card",
-      "refersTo": "spec-panel",
-      "description": "The trail marker: a bordered white definition list of the facts a skimming buyer wants.",
-      "html": "<dl class=\"ds-spec\"><div><dt>Stack</dt><dd>Rails, React, React Native, Elixir</dd></div><div><dt>Cadence</dt><dd>Working software every two weeks</dd></div><div><dt>Team</dt><dd>Senior people, no account layer</dd></div></dl>",
-      "css": ".ds-spec { margin: 0; background: #ffffff; border: 1px solid #d9dcd5; font-family: Archivo, system-ui, sans-serif; } .ds-spec > div { padding: 20px 24px; } .ds-spec > div + div { border-top: 1px solid #d9dcd5; } .ds-spec dt { font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #417703; } .ds-spec dd { margin: 4px 0 0; font-size: 16px; line-height: 24px; color: #3d3f44; }"
+      "refersTo": "panel",
+      "description": "The trail marker: a Birch panel with a 1px Line on a white section. Here as the clients 'Next' panel with a Label eyebrow and a full-width primary button.",
+      "html": "<div class=\"ds-panel\"><p class=\"ds-panel-label\">Next</p><p class=\"ds-panel-body\">Have a project in mind?</p><button class=\"ds-panel-btn\">Start a project</button></div>",
+      "css": ".ds-panel { width: 256px; padding: 24px; background: #f6f7f4; border: 1px solid #d9dcd5; font-family: Archivo, system-ui, sans-serif; } .ds-panel-label { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #417703; } .ds-panel-body { margin: 8px 0 0; font-size: 16px; line-height: 24px; color: #3d3f44; } .ds-panel-btn { display: inline-flex; width: 100%; justify-content: center; align-items: center; min-height: 44px; margin-top: 24px; padding: 0 24px; background: #006636; color: #ffffff; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; white-space: nowrap; cursor: pointer; } .ds-panel-btn:hover { background: #00522a; }"
     },
     {
       "name": "Ruled List",
       "kind": "custom",
-      "refersTo": "spec-panel",
+      "refersTo": "panel",
       "description": "Parallel items as ruled rows, not cards: Moss label, muted description, hairlines between.",
-      "html": "<dl class=\"ds-rows\"><div><dt>Strategy + design</dt><dd>Discovery, product definition and interface design.</dd></div><div><dt>Engineering</dt><dd>Web, mobile and backend, built to last.</dd></div><div><dt>AI automation</dt><dd>Workflows that run themselves, and measurement to prove it.</dd></div></dl>",
-      "css": ".ds-rows { margin: 0; font-family: Archivo, system-ui, sans-serif; } .ds-rows > div { padding: 16px 0; border-top: 1px solid #d9dcd5; } .ds-rows > div:last-child { border-bottom: 1px solid #d9dcd5; } .ds-rows dt { font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #417703; } .ds-rows dd { margin: 4px 0 0; font-size: 16px; line-height: 24px; color: #5c5f66; }"
+      "html": "<dl class=\"ds-rows\"><div><dt>Strategy + discovery</dt><dd>Research, product definition and a roadmap you can budget against.</dd></div><div><dt>Web + mobile apps</dt><dd>Design and engineering, built to last.</dd></div><div><dt>AI automation</dt><dd>Workflows that run themselves, and measurement to prove it.</dd></div></dl>",
+      "css": ".ds-rows { margin: 0; font-family: Archivo, system-ui, sans-serif; } .ds-rows > div { padding: 20px 0; border-top: 1px solid #d9dcd5; } .ds-rows > div:last-child { border-bottom: 1px solid #d9dcd5; } .ds-rows dt { font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #417703; } .ds-rows dd { margin: 4px 0 0; font-size: 16px; line-height: 24px; color: #5c5f66; }"
     },
     {
-      "name": "Step Card",
-      "kind": "card",
-      "refersTo": "spec-panel",
-      "description": "A numbered step: 2px Pine top rule, numeral label, bold Arvo title, body. No box.",
-      "html": "<ol class=\"ds-steps\"><li><p class=\"ds-steps-n\">01</p><h3>Discovery sprint</h3><p>Every engagement starts short. You know the scope, the cost and the first milestone before you commit to more.</p></li><li><p class=\"ds-steps-n\">02</p><h3>Two-week increments</h3><p>We ship in increments you can see and use, not status decks.</p></li></ol>",
-      "css": ".ds-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; font-family: Archivo, system-ui, sans-serif; } .ds-steps li { border-top: 2px solid #006636; padding-top: 24px; } .ds-steps-n { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #417703; } .ds-steps h3 { margin: 12px 0 0; font-family: Arvo, Rockwell, Georgia, serif; font-size: 22px; line-height: 28px; font-weight: 700; color: #3d3f44; } .ds-steps p:last-child { margin: 12px 0 0; font-size: 16px; line-height: 24px; color: #5c5f66; }"
+      "name": "Timeline",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "Numbered steps on a 2px Dusk rail with 12px square nodes, inside a purple-theme section: Dusk Label numeral, bold Arvo title, body.",
+      "html": "<ol class=\"ds-timeline\"><li><p class=\"ds-timeline-n\">01</p><h3>Discovery sprint</h3><p>Every engagement starts short. You know the scope, the cost and the first milestone before you commit to more.</p></li><li><p class=\"ds-timeline-n\">02</p><h3>Two-week increments</h3><p>We ship in increments you can see and use, not status decks.</p></li></ol>",
+      "css": ".ds-timeline { list-style: none; margin: 0; padding: 0; background: #f5f5f9; font-family: Archivo, system-ui, sans-serif; } .ds-timeline li { position: relative; padding-left: 40px; } .ds-timeline li + li { margin-top: 48px; } .ds-timeline li::before { content: ''; position: absolute; left: 0; top: 6px; width: 12px; height: 12px; background: #332d70; } .ds-timeline li::after { content: ''; position: absolute; left: 5px; top: 6px; bottom: -48px; width: 2px; background: #332d70; } .ds-timeline li:last-child::after { display: none; } .ds-timeline-n { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #745ca5; } .ds-timeline h3 { margin: 12px 0 0; font-family: Arvo, Rockwell, Georgia, serif; font-size: 22px; line-height: 28px; font-weight: 700; color: #272a35; } .ds-timeline p:last-child { margin: 12px 0 0; max-width: 36rem; font-size: 16px; line-height: 24px; color: #555a6b; }"
+    },
+    {
+      "name": "Client Columns",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "Three ruled columns divided by 1px Lines: monochrome logo in Granite, name in Title, one summary line.",
+      "html": "<ul class=\"ds-clients\"><li><span class=\"ds-clients-logo\">PARKER</span><h3>Parker Palm Springs</h3><p>Web Application + CMS</p></li><li><span class=\"ds-clients-logo\">WV</span><h3>Ward Village</h3><p>Web Application + CMS</p></li><li><span class=\"ds-clients-logo\">GPH</span><h3>Gramercy Park Hotel</h3><p>Web Application + CMS</p></li></ul>",
+      "css": ".ds-clients { list-style: none; margin: 0; padding: 24px 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #d9dcd5; border-bottom: 1px solid #d9dcd5; font-family: Archivo, system-ui, sans-serif; } .ds-clients li { padding: 8px 0 8px 24px; border-left: 1px solid #d9dcd5; } .ds-clients li:first-child { padding-left: 0; border-left: none; } .ds-clients-logo { display: block; height: 36px; font-family: Arvo, Rockwell, Georgia, serif; font-size: 24px; line-height: 36px; letter-spacing: 0.1em; color: #3d3f44; } .ds-clients h3 { margin: 24px 0 0; font-family: Arvo, Rockwell, Georgia, serif; font-size: 22px; line-height: 28px; font-weight: 700; color: #3d3f44; } .ds-clients p { margin: 8px 0 0; font-size: 16px; line-height: 24px; color: #5c5f66; }"
     },
     {
       "name": "Night Band",
       "kind": "custom",
-      "refersTo": "contact-band",
-      "description": "A section themed night: Night Ground surface, Lantern Bright label, Night Ink headline, Lantern button.",
+      "refersTo": "footer",
+      "description": "A section themed night: Night Ground surface, Lantern Bright label, Night Ink headline, Lantern button. No contour field; the night panorama is its ground.",
       "html": "<section class=\"ds-night\"><p class=\"ds-night-label\">Run + improve</p><h2>Sleep at night. We're on watch.</h2><p class=\"ds-night-body\">If something breaks at 3am, it's our pager, not yours.</p><button class=\"ds-night-btn\">Start a project</button></section>",
       "css": ".ds-night { background: #131520; padding: 48px 24px; font-family: Archivo, system-ui, sans-serif; } .ds-night-label { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #caccff; } .ds-night h2 { margin: 8px 0 0; font-family: Arvo, Rockwell, Georgia, serif; font-size: 40px; line-height: 46px; font-weight: 400; letter-spacing: -0.01em; color: #ebeef7; } .ds-night-body { margin: 24px 0 0; font-size: 18px; line-height: 28px; color: #bbbdc6; } .ds-night-btn { display: inline-flex; align-items: center; min-height: 44px; margin-top: 40px; padding: 0 24px; background: #a1a2ec; color: #0d092b; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; } .ds-night-btn:hover { background: #b4b6fa; }"
     },
     {
-      "name": "Contact Band",
+      "name": "Manifesto Band",
       "kind": "custom",
-      "refersTo": "contact-band",
-      "description": "The one Pine-drenched close: white label (Moss fails AA on Pine), white headline and lead, inverse button beside an underlined email link.",
-      "html": "<section class=\"ds-contact\"><p class=\"ds-contact-label\">Contact</p><h2>Have a project in mind? Let's talk it through.</h2><p class=\"ds-contact-body\">Tell us what you're building and where it's stuck. We'll reply within one working day.</p><div class=\"ds-contact-actions\"><button class=\"ds-contact-btn\">Start a project</button><a href=\"#\" class=\"ds-contact-link\">hello@campgrounddd.com</a></div></section>",
-      "css": ".ds-contact { background: #00522a; padding: 48px 24px; font-family: Archivo, system-ui, sans-serif; color: #ffffff; } .ds-contact-label { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 14px; line-height: 20px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #ffffff; } .ds-contact h2 { margin: 8px 0 0; font-family: Arvo, Rockwell, Georgia, serif; font-size: 40px; line-height: 46px; font-weight: 400; letter-spacing: -0.01em; color: #ffffff; } .ds-contact-body { margin: 24px 0 0; max-width: 36rem; font-size: 18px; line-height: 28px; color: #ffffff; } .ds-contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 40px; } .ds-contact-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 24px; background: #ffffff; color: #006636; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; } .ds-contact-btn:hover { background: #f0faf3; } .ds-contact-btn:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; } .ds-contact-link { font-size: 16px; line-height: 24px; font-weight: 600; color: #ffffff; text-decoration: underline; text-underline-offset: 4px; } .ds-contact-link:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; }"
+      "refersTo": "manifesto-band",
+      "description": "The one Dusk-drenched close: Dusk Pale eyebrow, white headline, Dusk Tint lead, inverse button beside an underlined white email link. The topo field (Lantern Bright, 8%) is omitted here; use the bg-topo utility on the page.",
+      "html": "<section class=\"ds-manifesto\"><p class=\"ds-manifesto-label\">Manifesto</p><h2>We believe the future is something we can build together.</h2><p class=\"ds-manifesto-body\">Tell us what you're building and where it's stuck. We'll reply within one working day.</p><div class=\"ds-manifesto-actions\"><button class=\"ds-manifesto-btn\">Start a project</button><a href=\"#\" class=\"ds-manifesto-link\">hello@campgrounddd.com</a></div></section>",
+      "css": ".ds-manifesto { background: #332d70; padding: 48px 24px; font-family: Archivo, system-ui, sans-serif; color: #ffffff; } .ds-manifesto-label { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 14px; line-height: 20px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #d5d7fc; } .ds-manifesto h2 { margin: 16px 0 0; max-width: 48rem; font-family: Arvo, Rockwell, Georgia, serif; font-size: clamp(36px, 4.2vw, 64px); line-height: 1.1; font-weight: 400; letter-spacing: -0.01em; color: #ffffff; } .ds-manifesto-body { margin: 32px 0 0; max-width: 36rem; font-size: 18px; line-height: 28px; color: #eaebfe; } .ds-manifesto-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 40px; } .ds-manifesto-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 24px; background: #ffffff; color: #332d70; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; } .ds-manifesto-btn:hover { background: #f5f6ff; } .ds-manifesto-btn:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; } .ds-manifesto-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; line-height: 24px; font-weight: 600; color: #ffffff; text-decoration: underline; text-underline-offset: 4px; } .ds-manifesto-link:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Footer",
+      "kind": "custom",
+      "refersTo": "footer",
+      "description": "Night footer: lockup and description with the Ember heart, a 'Sections' ruled link column under a Lantern Bright label, email in Lantern and copyright right.",
+      "html": "<footer class=\"ds-footer\"><div><span class=\"ds-footer-brand\">campground</span><p class=\"ds-footer-desc\">Campground Digital designs, builds and runs software for companies that can't afford it to fail.</p><p class=\"ds-footer-desc ds-footer-heart\">Built with <svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z\"/></svg> in Colorado</p></div><nav><p class=\"ds-footer-label\">Sections</p><ul class=\"ds-footer-links\"><li><a href=\"#\">Services</a></li><li><a href=\"#\">Expertise</a></li><li><a href=\"#\">How we work</a></li><li><a href=\"#\">Clients</a></li><li><a href=\"#\">Run + improve</a></li><li><a href=\"#\">Contact</a></li></ul></nav><div class=\"ds-footer-right\"><a href=\"#\" class=\"ds-footer-mail\">hello@campgrounddd.com</a><p>&copy; 2026 Campground Digital</p></div></footer>",
+      "css": ".ds-footer { display: grid; grid-template-columns: 5fr 4fr 3fr; gap: 48px; padding: 64px 24px; background: #131520; border-top: 1px solid #393d48; color: #ebeef7; font-family: Archivo, system-ui, sans-serif; font-size: 14px; line-height: 20px; } .ds-footer-brand { font-family: Arvo, Rockwell, Georgia, serif; font-size: 28px; color: #ebeef7; } .ds-footer-desc { margin: 16px 0 0; max-width: 24rem; color: #bbbdc6; } .ds-footer-heart { display: flex; align-items: center; gap: 6px; } .ds-footer-heart svg { width: 16px; height: 16px; color: #ff8a80; } .ds-footer-label { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #caccff; } .ds-footer-links { list-style: none; margin: 16px 0 0; padding: 0; border-bottom: 1px solid #393d48; } .ds-footer-links li { border-top: 1px solid #393d48; } .ds-footer-links a { display: flex; align-items: center; min-height: 44px; font-weight: 600; color: #ebeef7; text-decoration: none; } .ds-footer-links a:hover { color: #a1a2ec; } .ds-footer-right { text-align: right; color: #bbbdc6; } .ds-footer-mail { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: #a1a2ec; text-decoration: none; } .ds-footer-mail:hover { color: #b4b6fa; } .ds-footer-right p { margin: 8px 0 0; }"
     }
   ],
   "narrative": {
     "northStar": "The Trail Map",
-    "overview": "Campground's site is drawn like a survey map of good country: a faint contour ground, ruled edges, every fact under a label, routes numbered in order. The map is where the brand's two halves meet. The outdoors supplies the warmth (Pine and Moss greens, a lantern-lit night band, a backpack and a tent), and the cartography supplies the rigor (hairlines, a strict type scale, squared corners, nothing floating). A prospective client skimming the page should be able to read it the way they would read a trailhead sign: what is here, how far, which way.\n\nComponents are sturdy and plainspoken. They are built like gear: squared, legible, full-weight fills, strong outlines where an outline is needed, no ornament. Warmth comes from the copy, the color, and the two illustrations, never from soft shapes or decorative effects. The system is flat by construction. It rejects the stock Tailwind UI look (default indigo, default grays, unmodified marketing blocks), gradient washes, glassmorphism, and literal summer-camp pastiche such as clip-art tents or faux-wood texture.",
+    "overview": "Campground's site is drawn like a survey map of good country: ruled edges, every fact under a label, routes numbered in order, and a horizon the words stand on. The map is where the brand's two halves meet. The outdoors supplies the warmth (Pine and Moss greens, a daylight campsite, a lantern-lit tent at night), and the cartography supplies the rigor (hairlines, a strict type scale, squared corners, nothing floating). A prospective client skimming the page should be able to read it the way they would read a trailhead sign: what is here, how far, which way.\n\nThe page is read from morning to night. The ground darkens as the visitor descends: Birch day in the hero, white and sunken working sections, purple arriving as dusk in the timeline, a night band, a Dusk-drenched manifesto, and a night footer. Illustration is the ground the text stands on, not a picture beside it: flat, faceted, hard-edged plates in the palette of the section they sit in, with the sky left as the section's own flat surface so every word sits on plain ground.\n\nComponents are sturdy and plainspoken. They are built like gear: squared, legible, full-weight fills, strong outlines where an outline is needed, no ornament. Warmth comes from the copy, the color, and the illustration plates, never from soft shapes or decorative effects. The system is flat by construction. It rejects the stock Tailwind UI look (default indigo, default grays, unmodified marketing blocks), gradient washes, glassmorphism, the \"text left, image right\" band repeated down a page, and literal summer-camp pastiche such as clip-art tents or faux-wood texture.",
     "keyCharacteristics": [
       "Flat surfaces separated by 1px lines; depth is a surface step, not a shadow.",
       "Slab-serif display (Arvo) over a grotesque body (Archivo), with wide uppercase labels (Archivo Expanded) naming everything.",
-      "Green colourway by default; night is a per-section theme, not a user dark mode.",
+      "Green colourway by default; purple and night are per-section themes set with data-theme, not a user dark mode.",
+      "Illustrations are full-bleed plates anchored to the bottom of a band; the text column stays on the band's flat surface.",
       "Corners are 2px. Nothing is rounder than 4px.",
-      "A topography contour field sits behind the hero and the night band, always under 10% opacity.",
+      "A topography contour field appears in two places only (the manifesto band, the services panel), always under 10% opacity.",
       "44px minimum target height on every control."
     ],
     "rules": [
-      { "name": "The Moss Is For Labels Rule", "body": "Moss appears on uppercase labels and nowhere else. It is never a fill, never body text, never a button.", "section": "colors" },
-      { "name": "The Faint Contour Rule", "body": "The topography field stays under 10% opacity (6% on light, 8% at night) so text reads against a flat surface. It marks a section as ground; it is not a texture to turn up.", "section": "colors" },
-      { "name": "The One Band Rule", "body": "Exactly one section per page is drenched in Pine, and it is the close. Everywhere else, Pine is a control or a rule, not a ground.", "section": "colors" },
-      { "name": "The Label First Rule", "body": "Every section and every fact is named by an uppercase Moss label before anything else is said: the label gives the kind, the Arvo line gives the thing. A heading with no label above it is missing its map key. On the Pine contact band the label is white, because Moss fails AA on Pine.", "section": "typography" },
-      { "name": "The Lowercase Summit Rule", "body": "The page's single top headline is set in lowercase with no period (\"software that holds up in the field\", \"off the trail\"), matching the lowercase wordmark. Section headlines below it use sentence case.", "section": "typography" },
+      { "name": "The Moss Is For Labels Rule", "body": "Moss appears on uppercase labels and nowhere else. It is never a fill, never body text, never a button. Inside a themed section the label color re-points with the theme (Dusk Label on purple, Lantern Bright on night); the rule follows the token, not the hue.", "section": "colors" },
+      { "name": "The Faint Contour Rule", "body": "The topography field stays under 10% opacity (6% on light, 8% on Dusk and night) so text reads against a flat surface. It appears in exactly two places: the manifesto band, inked in Lantern Bright, and the bordered services panel behind the flat lay. It marks a place as ground; it is not a texture to turn up or spread.", "section": "colors" },
+      { "name": "The One Band Rule", "body": "Exactly one section per page is drenched in a brand color, it is the close, and that color is Dusk. Pine is never a ground: everywhere on the page it is a control, a marker, or a rule.", "section": "colors" },
+      { "name": "The Dusk Falls Once Rule", "body": "Purple enters the page as evening and does not appear above the timeline. Its order is fixed: accent (timeline rail and nodes), drench (manifesto), then night (footer).", "section": "colors" },
+      { "name": "The Label First Rule", "body": "Every section and every fact is named by an uppercase label before anything else is said: the label gives the kind, the Arvo line gives the thing. A heading with no label above it is missing its map key. The label takes the section theme's label token: Moss on green, Dusk Label on purple, Lantern Bright on night, Dusk Pale on the Dusk drench (Moss fails AA on Dusk as it does on Pine).", "section": "typography" },
+      { "name": "The Lowercase Summit Rule", "body": "The page's single top headline is set in lowercase with no period (\"software that holds up in the field\"), matching the lowercase wordmark. Section headlines below it use sentence case with a period.", "section": "typography" },
       { "name": "The Lines Not Shadows Rule", "body": "A panel is separated from its ground by a 1px Line and a surface step. If something in the page flow seems to need a shadow, it needs a border.", "section": "elevation" },
-      { "name": "The Two Pixel Rule", "body": "2px on controls, 4px at most, 0 on containers. The design system's own note on the scale is \"use nothing rounder\".", "section": "shapes" }
+      { "name": "The Two Pixel Rule", "body": "2px on controls, 4px at most, 0 on containers. The design system's own note on the scale is \"use nothing rounder\". Markers and rails are also 2px, and a marker is a square or a rule, never a dot.", "section": "shapes" }
     ],
     "dos": [
       "Do use the design system's tokens (brand-*, surface, ink, ink-muted, line, font-display, font-label, text-label, text-display-lg) and rename indigo- to brand- on any pasted Tailwind UI markup, even though the alias makes it render on-brand.",
-      "Do put an uppercase Moss label above every section title and every fact.",
+      "Do put an uppercase label above every section title and every fact, in the section theme's label token.",
       "Do separate surfaces with a 1px Line and a surface step.",
       "Do keep every control at least 44px tall with a visible 2px focus outline.",
-      "Do set a night section with data-theme=\"night\" on the section and let the tokens re-point; don't hand-pick dark colors.",
-      "Do present parallel items as ruled rows or top-ruled steps."
+      "Do set a themed section with data-theme=\"purple\" or data-theme=\"night\" on the section and let the tokens re-point; don't hand-pick dark or purple colors.",
+      "Do present parallel items as ruled rows, ruled columns, or a railed timeline.",
+      "Do put an illustration behind the text column as a bottom-anchored plate with the sky left as the section surface, and keep every word on plain ground.",
+      "Do ship raster plates as WebP at 2x with intrinsic dimensions, and keep the PNG master and prompt sidecar beside them for provenance."
     ],
     "donts": [
       "Don't round anything past 4px, or put a radius on a panel, band, or image.",
       "Don't add shadows to in-flow elements, and don't add gradients, glass, or blur anywhere.",
       "Don't use Moss for anything but labels, or the logo's light green (#70aa43) for text: it fails AA on white.",
-      "Don't raise the contour field's opacity to 10% or beyond.",
-      "Don't ship a block that reads as stock Tailwind UI: default indigo, default gray scale, a gray hero with three icon cards.",
-      "Don't illustrate with clip-art camping props or faux-wood and canvas textures. The two flat illustrations and the contour field are the whole outdoor vocabulary.",
+      "Don't raise the contour field's opacity to 10% or beyond, or add it to a third place.",
+      "Don't drench a band in Pine, and don't use purple above the timeline.",
+      "Don't animate anything beyond the nav marker's opacity and the disclosure menu; no scroll-triggered motion.",
+      "Don't ship a block that reads as stock Tailwind UI: default indigo, default gray scale, a gray hero with three icon cards, or a text-left image-right band repeated down the page.",
+      "Don't illustrate with clip-art camping props or faux-wood and canvas textures. The three plates (day panorama, flat lay, night panorama) and the contour field are the whole outdoor vocabulary; the two retired SVGs (tent-flat, backpack-flat) stay in the repo as reference for the vocabulary.",
       "Don't hand-edit _tailwind/campground.css; change the tokens in the Campground Design System and re-export."
     ]
   }
