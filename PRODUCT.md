@@ -43,6 +43,13 @@ we do the same work. Named on the site in this order and this wording:
   sized to the product. Includes uptime and error monitoring around the clock
   and an on-call engineer who already knows the code.
 
+**Expertise strip** (after services, DockYard's "Expertise across
+technologies" as the model): application stack is Ruby on Rails, React,
+React Native, Elixir; cloud and hosting is Fly.io, AWS, Azure. Logos are
+monochrome inline SVGs in `_includes/logos/` (Simple Icons for Rails, React,
+Elixir, Fly.io; Wikimedia Commons for AWS and Azure; React Native is the React
+atom in a phone frame, drawn here).
+
 Claims cleared for publication: working software every two weeks, one working
 day reply time, senior people with no account layer, on-call after launch.
 

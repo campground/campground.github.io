@@ -10,3 +10,7 @@ assets/css/site.css
 
 # Impeccable platform binary: launcher downloads it on demand
 .claude/skills/impeccable/scripts/bin/
+
+# Impeccable live-mode session state (config.json is kept)
+.impeccable/live/*
+!.impeccable/live/config.json
