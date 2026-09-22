@@ -10,7 +10,7 @@ title: Software design, development and AI automation
 <section class="relative isolate overflow-hidden bg-surface lg:min-h-[924px]">
   <div class="relative z-10 mx-auto max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] px-6 pb-8 lg:px-0 lg:pt-[6.5vw] lg:pb-0">
     <div class="max-w-[860px] pt-14 sm:pt-20 lg:pt-0">
-      <p class="font-label text-[15px]/none font-bold tracking-[0.14em] text-brand-bright uppercase lg:text-[19px]/none">Design + development + AI</p>
+      <p class="font-label text-[13px]/none font-bold tracking-[0.12em] text-balance text-brand-bright uppercase sm:text-[15px]/none sm:tracking-[0.14em] lg:text-[19px]/none">Design + development + AI</p>
       <h1 class="mt-5 font-display text-[clamp(44px,5.2vw,80px)]/[1.03] font-normal tracking-[-0.035em] text-balance text-ink">software that holds up in the field</h1>
       <p class="mt-8 max-w-[760px] text-[18px]/[1.5] text-pretty text-ink-muted lg:text-[21px]/[1.45]">Campground Digital is a full-service agency. We take products from first sketch to production and keep them running: strategy, design, engineering and the AI that makes them smarter.</p>
       <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
@@ -31,8 +31,8 @@ title: Software design, development and AI automation
         <h2 class="mt-2 font-display text-display-lg text-ink">Pack everything you need.</h2>
         <p class="mt-6 max-w-2xl text-body-lg text-ink-muted">One team, the whole lifecycle: strategy, design, engineering and the AI that makes them smarter. Take what the project needs and leave the rest.</p>
       </div>
-      <div class="bg-topo border border-line bg-surface p-6 sm:p-8 lg:col-span-5 lg:justify-self-end">
-        <img src="{{ '/assets/plates/flatlay.webp' | relative_url }}" alt="A tent seen from above with six pieces of gear laid out around it: a trail map and compass, a laptop, a lantern, a coiled rope, a field notebook and a tool roll" width="960" height="960" loading="lazy" decoding="async" class="mx-auto w-full max-w-[440px]">
+      <div class="bg-topo border border-line bg-surface p-6 sm:p-8 lg:col-span-12">
+        <img src="{{ '/assets/plates/flatlay.webp' | relative_url }}" alt="A pitched tent seen from the side with camping gear laid out around it: map and compass, laptop, lantern, rope, notebook, tool roll, stove, first-aid kit, boots, rain shell, sleeping bag and pad, trekking poles, camera and more" width="1536" height="1024" loading="lazy" decoding="async" class="mx-auto w-full">
       </div>
     </div>
     <dl class="mt-16 grid grid-cols-1 gap-x-12 border-b border-line md:grid-cols-2">
@@ -65,7 +65,8 @@ title: Software design, development and AI automation
 </section>
 
 <!-- Expertise: the tools on the packing list -->
-{%- assign tool = "flex min-w-24 flex-col items-center gap-2.5 text-center text-ink" -%}
+{%- assign tool = "flex min-w-0 flex-col items-center gap-2.5 text-center text-ink sm:min-w-24" -%}
+{%- assign tools = "grid grid-cols-4 gap-x-3 gap-y-6 sm:flex sm:flex-wrap sm:gap-x-10" -%}
 <section id="expertise" class="border-t border-line bg-surface-sunken">
   <div class="mx-auto max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] px-6 py-24 sm:py-32 lg:px-0">
     <div class="max-w-2xl">
@@ -74,10 +75,10 @@ title: Software design, development and AI automation
       <p class="mt-6 text-body-lg text-ink-muted">We go deep on a few tools we trust in production rather than wide on everything. Each one has carried real products for years, and we know how to make it last.</p>
     </div>
     <dl class="mt-16 border-b border-line">
-      <div class="grid grid-cols-1 gap-x-12 gap-y-4 border-t border-line py-7 md:grid-cols-12">
+      <div class="grid grid-cols-1 gap-x-12 gap-y-5 border-t border-line py-7 md:grid-cols-12">
         <dt class="font-label text-label text-brand-bright uppercase md:col-span-3 md:pt-1">Application stack</dt>
         <dd class="md:col-span-9">
-          <ul class="flex flex-wrap gap-x-10 gap-y-6">
+          <ul class="{{ tools }}">
             <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/rails.svg %}</span><span class="text-body-sm font-semibold">Ruby on Rails</span></li>
             <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/react.svg %}</span><span class="text-body-sm font-semibold">React</span></li>
             <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/react-native.svg %}</span><span class="text-body-sm font-semibold">React Native</span></li>
@@ -85,10 +86,10 @@ title: Software design, development and AI automation
           </ul>
         </dd>
       </div>
-      <div class="grid grid-cols-1 gap-x-12 gap-y-4 border-t border-line py-7 md:grid-cols-12">
+      <div class="grid grid-cols-1 gap-x-12 gap-y-5 border-t border-line py-7 md:grid-cols-12">
         <dt class="font-label text-label text-brand-bright uppercase md:col-span-3 md:pt-1">Cloud + hosting</dt>
         <dd class="md:col-span-9">
-          <ul class="flex flex-wrap gap-x-10 gap-y-6">
+          <ul class="{{ tools }}">
             <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/flyio.svg %}</span><span class="text-body-sm font-semibold">Fly.io</span></li>
             <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/aws.svg %}</span><span class="text-body-sm font-semibold">AWS</span></li>
             <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/azure.svg %}</span><span class="text-body-sm font-semibold">Azure</span></li>
@@ -130,7 +131,7 @@ title: Software design, development and AI automation
 </section>
 
 <!-- Clients -->
-{%- assign client = "flex flex-col border-t border-line py-6 md:border-t-0 md:border-l md:py-2 md:pl-6 md:first:border-l-0 md:first:pl-0" -%}
+{%- assign client = "flex flex-col items-center border-t border-line py-6 text-center md:border-t-0 md:border-l md:py-4 md:px-6 md:first:border-l-0" -%}
 <section id="clients" class="border-t border-line bg-surface-raised">
   <div class="mx-auto grid max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] grid-cols-1 gap-x-12 gap-y-12 px-6 py-24 sm:py-32 lg:grid-cols-12 lg:px-0">
     <div class="lg:col-span-3">
@@ -139,19 +140,22 @@ title: Software design, development and AI automation
     </div>
     <ul class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-b md:border-line md:py-6 lg:col-span-9 lg:grid-cols-[1fr_1fr_1fr_auto]">
       <li class="{{ client }}">
-        <span class="h-9 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/parker-palm-springs.svg %}</span>
-        <h3 class="mt-6 font-display text-heading-md text-ink">Parker Palm Springs</h3>
-        <p class="mt-2 text-body text-ink-muted">Web Application + CMS</p>
+        <span class="h-12 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/parker-palm-springs.svg %}</span>
+        <span class="mt-5 h-0.5 w-6 bg-brand-600" aria-hidden="true"></span>
+        <h3 class="mt-4 text-body font-semibold text-ink">Parker Palm Springs</h3>
+        <p class="mt-2 font-label text-label text-brand-bright uppercase">Web Application + CMS</p>
       </li>
       <li class="{{ client }}">
-        <span class="h-9 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/ward-village.svg %}</span>
-        <h3 class="mt-6 font-display text-heading-md text-ink">Ward Village</h3>
-        <p class="mt-2 text-body text-ink-muted">Web Application + CMS</p>
+        <span class="h-12 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/ward-village.svg %}</span>
+        <span class="mt-5 h-0.5 w-6 bg-brand-600" aria-hidden="true"></span>
+        <h3 class="mt-4 text-body font-semibold text-ink">Ward Village</h3>
+        <p class="mt-2 font-label text-label text-brand-bright uppercase">Web Application + CMS</p>
       </li>
       <li class="{{ client }}">
-        <span role="img" aria-label="Gramercy Park Hotel" class="block h-9 w-[92px] bg-ink [mask:url('/assets/logos/clients/gramercy-park-hotel.png')_left_center/contain_no-repeat]"></span>
-        <h3 class="mt-6 font-display text-heading-md text-ink">Gramercy Park Hotel</h3>
-        <p class="mt-2 text-body text-ink-muted">Web Application + CMS</p>
+        <span role="img" aria-label="Gramercy Park Hotel" class="block h-12 w-[112px] bg-ink [mask:url('/assets/logos/clients/gramercy-park-hotel.png')_center/contain_no-repeat]"></span>
+        <span class="mt-5 h-0.5 w-6 bg-brand-600" aria-hidden="true"></span>
+        <h3 class="mt-4 text-body font-semibold text-ink">Gramercy Park Hotel</h3>
+        <p class="mt-2 font-label text-label text-brand-bright uppercase">Web Application + CMS</p>
       </li>
       <li class="mt-8 border border-line bg-surface p-6 md:col-span-3 md:mt-6 lg:col-span-1 lg:mt-0 lg:ml-6 lg:w-64">
         <p class="font-label text-label text-brand-bright uppercase">Next</p>

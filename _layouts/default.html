@@ -20,7 +20,7 @@
         <a href="{{ '/' | relative_url }}" class="inline-flex min-h-11 shrink-0 items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus">
           <img src="{{ '/assets/logos/Campground-Digital-Green.svg' | relative_url }}" alt="Campground Digital" width="792" height="326" class="h-11 w-auto sm:h-14 lg:h-[72px]">
         </a>
-        <div class="hidden items-center gap-x-10 md:flex">
+        <div class="hidden items-center gap-x-10 lg:flex">
           {%- for s in sections -%}
           {%- assign pair = s | split: ":" -%}
           <a href="{{ '/#' | append: pair[0] | relative_url }}" data-nav-link class="{{ navlink }}">{{ pair[1] }}</a>
@@ -28,14 +28,14 @@
         </div>
         <div class="flex items-center gap-x-3">
           <a href="{{ '/#contact' | relative_url }}" class="hidden h-12 items-center rounded-xs bg-brand-600 px-4 font-label text-label whitespace-nowrap sm:inline-flex lg:h-[52px] lg:px-7 text-on-brand-deep uppercase hover:bg-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 sm:px-6">Start a project</a>
-          <button id="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" class="inline-flex size-11 items-center justify-center rounded-xs text-ink hover:text-brand-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 md:hidden">
+          <button id="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" class="inline-flex size-11 items-center justify-center rounded-xs text-ink hover:text-brand-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 lg:hidden">
             <span class="sr-only">Menu</span>
             <svg data-icon="open" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
             <svg data-icon="close" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" hidden><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
           </button>
         </div>
       </nav>
-      <div id="mobile-nav" hidden class="border-t border-line bg-surface-raised md:hidden">
+      <div id="mobile-nav" hidden class="border-t border-line bg-surface-raised lg:hidden">
         <nav aria-label="Sections" class="mx-auto max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] px-6">
           {%- for s in sections -%}
           {%- assign pair = s | split: ":" -%}
@@ -51,28 +51,30 @@
     </main>
 
     <footer data-theme="night" class="border-t border-line bg-surface text-ink">
-      <div class="mx-auto grid max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] grid-cols-1 gap-y-10 px-6 py-16 md:grid-cols-12 md:gap-x-12 lg:px-0 sm:py-24">
-        <div class="md:col-span-5">
-          <img src="{{ '/assets/logos/Campground-Digital-Night.svg' | relative_url }}" alt="Campground Digital" width="792" height="326" class="h-12 w-auto">
-          <p class="mt-6 max-w-sm text-body-sm text-balance text-ink-muted">Campground Digital designs, builds and runs software for companies that can't afford it to fail.</p>
-          <p class="mt-4 flex items-center gap-x-1.5 text-body-sm text-ink-muted">Built with
-            <svg class="size-4 text-danger" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"/></svg><span class="sr-only">love</span>
-            in Colorado</p>
-        </div>
-        <nav aria-label="Footer" class="md:col-span-4">
-          <p class="font-label text-label text-brand-bright uppercase">Sections</p>
-          <ul class="mt-4 border-b border-line">
-            {%- for s in sections -%}
-            {%- assign pair = s | split: ":" -%}
-            <li class="border-t border-line"><a href="{{ '/#' | append: pair[0] | relative_url }}" class="flex min-h-11 items-center text-body-sm font-semibold text-ink hover:text-brand-600 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-600">{{ pair[1] }}</a></li>
-            {%- endfor -%}
-            <li class="border-t border-line"><a href="{{ '/#contact' | relative_url }}" class="flex min-h-11 items-center text-body-sm font-semibold text-ink hover:text-brand-600 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-600">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="text-body-sm text-ink-muted md:col-span-3 md:text-right">
-          <a href="mailto:{{ site.email }}" class="inline-flex min-h-11 items-center font-semibold text-brand-600 hover:text-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">{{ site.email }}</a>
-          <p class="mt-2">&copy; {{ site.time | date: '%Y' }} Campground Digital</p>
-        </div>
+        <div class="mx-auto max-w-[1424px] px-6 py-16 sm:py-24 lg:w-[87.5%] lg:max-w-[1600px] lg:px-0">
+          <div class="grid grid-cols-1 gap-y-10 md:grid-cols-12 md:gap-x-12">
+            <div class="md:col-span-7">
+            <img src="{{ '/assets/logos/Campground-Digital-Night.svg' | relative_url }}" alt="Campground Digital" width="792" height="326" class="h-12 w-auto">
+            <p class="mt-6 max-w-sm text-body-sm text-balance text-ink-muted">Campground Digital designs, builds and runs software for companies that can't afford it to fail.</p>
+            <p class="mt-4 flex items-center gap-x-1.5 text-body-sm text-ink-muted">Built with
+              <svg class="size-4 text-danger" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"/></svg><span class="sr-only">love</span>
+              in Colorado</p>
+            </div>
+            <nav aria-label="Footer" class="md:col-span-4 md:col-start-9">
+            <p class="font-label text-label text-brand-bright uppercase">Sections</p>
+            <ul class="mt-4 border-b border-line">
+              {%- for s in sections -%}
+              {%- assign pair = s | split: ":" -%}
+              <li class="border-t border-line"><a href="{{ '/#' | append: pair[0] | relative_url }}" class="flex min-h-12 items-center py-3 text-body-sm font-semibold text-ink hover:text-brand-600 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-600">{{ pair[1] }}</a></li>
+              {%- endfor -%}
+              <li class="border-t border-line"><a href="{{ '/#contact' | relative_url }}" class="flex min-h-12 items-center py-3 text-body-sm font-semibold text-ink hover:text-brand-600 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-600">Contact</a></li>
+            </ul>
+            </nav>
+          </div>
+          <div class="mt-12 flex flex-col gap-y-2 border-t border-line pt-6 text-body-sm text-ink-muted sm:flex-row sm:items-center sm:justify-between">
+            <a href="mailto:{{ site.email }}" class="inline-flex min-h-11 items-center font-semibold text-brand-600 hover:text-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">{{ site.email }}</a>
+            <p>&copy; {{ site.time | date: '%Y' }} Campground Digital</p>
+          </div>
       </div>
     </footer>
 
@@ -117,7 +119,7 @@
         toggle.addEventListener('click', function () { setOpen(menu.hidden); });
         menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
         document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setOpen(false); toggle.focus(); } });
-        window.matchMedia('(min-width: 768px)').addEventListener('change', function (e) { if (e.matches) setOpen(false); });
+        window.matchMedia('(min-width: 1024px)').addEventListener('change', function (e) { if (e.matches) setOpen(false); });
       })();
     </script>
   </body>
