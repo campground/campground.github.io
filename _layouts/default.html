@@ -116,8 +116,8 @@
           if (open === !menu.hidden) return;
           menu.hidden = !open;
           toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-          openIcon.hidden = open;
-          closeIcon.hidden = !open;
+          openIcon.toggleAttribute('hidden', open);
+          closeIcon.toggleAttribute('hidden', !open);
           // Fixed body locks scroll on iOS Safari too, where overflow:hidden on <html> does not.
           if (open) { lockY = window.scrollY; document.body.style.cssText = 'position:fixed;top:-' + lockY + 'px;width:100%'; }
           else { document.body.style.cssText = ''; window.scrollTo({ top: lockY, behavior: 'instant' }); }
