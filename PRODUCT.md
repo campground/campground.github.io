@@ -137,4 +137,5 @@ in `assets/fonts/` under the OFL.
 - Contact path: email link, form, or booking link.
 - Logo typefaces, if known, and whether to license them for the web.
 
-No `DESIGN.md`: the design system artifact above fills that role.
+`DESIGN.md` (with `.impeccable/design.json`) records the shipped visual system;
+the design system artifact above remains the token source it is derived from.
