@@ -7,3 +7,6 @@ vendor/
 .DS_Store
 node_modules/
 assets/css/site.css
+
+# Impeccable platform binary: launcher downloads it on demand
+.claude/skills/impeccable/scripts/bin/
