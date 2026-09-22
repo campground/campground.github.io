@@ -3,16 +3,28 @@
 Design context for anyone (human or agent) doing design work on this site.
 Read this before designing; update it when the answers change.
 
+<!-- impeccable:product-schema 1 -->
+
+## Platform
+
+web
+
 ## What it is
 
 Campground is a full-service digital agency and consultancy. This repo is its
 public site, <https://www.campgrounddd.com>.
+
+## Positioning
+
+Small and senior. Clients work directly with the principals who do the work,
+with no account layers between them and the people designing and building.
 
 ## Services
 
 - **Web and mobile applications** — Ruby on Rails, React, React Native, Elixir.
 - **AI automation** — building automations that make a company's workflows
   more efficient.
+- **Design** — brand and identity, product and app UI.
 - **Consulting** — full-service: strategy and design through build and launch.
 
 ## Audience
@@ -119,8 +131,11 @@ in `assets/fonts/` under the OFL.
 
 ## Open questions
 
-- Case studies and client names that can be shown.
+- Case studies: none on hand yet. Client names and testimonials exist and are
+  cleared to publish, but the text is not in this repo. Wait for the real
+  material; never write placeholder quotes, client names, or metrics.
 - Contact path: email link, form, or booking link.
 - Logo typefaces, if known, and whether to license them for the web.
 
-No `DESIGN.md`: the design system artifact above fills that role.
+`DESIGN.md` (with `.impeccable/design.json`) records the shipped visual system;
+the design system artifact above remains the token source it is derived from.

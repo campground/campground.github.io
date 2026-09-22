@@ -24,6 +24,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - PRODUCT.md
+  - DESIGN.md
   - node_modules
   - package.json
   - package-lock.json
