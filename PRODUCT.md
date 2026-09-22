@@ -21,11 +21,30 @@ with no account layers between them and the people designing and building.
 
 ## Services
 
-- **Web and mobile applications** — Ruby on Rails, React, React Native, Elixir.
-- **AI automation** — building automations that make a company's workflows
-  more efficient.
-- **Design** — brand and identity, product and app UI.
-- **Consulting** — full-service: strategy and design through build and launch.
+Six services, the same map DockYard (<https://dockyard.com/services>) uses;
+we do the same work. Named on the site in this order and this wording:
+
+- **Strategy + discovery** — research, product definition and a roadmap the
+  client can budget against.
+- **Web + mobile apps** — design and engineering: Rails, TypeScript and React
+  on the web; React Native for iOS and Android; Elixir where uptime and scale
+  matter most. Includes brand and identity, product and app UI, and sites the
+  client's team can update without a developer (content management is part of
+  this, not a separate service).
+- **AI automation** — practical AI inside the product and the operations:
+  workflows that run themselves, and measurement to prove it.
+- **Consulting + team augmentation** — senior engineers who join the client's
+  team, ship from the first week and leave the codebase better than they found
+  it.
+- **Architecture reviews + audits** — a second set of senior eyes on code and
+  infrastructure: what will break under load, what to fix first, in writing.
+- **Application maintenance** — ongoing support after launch: updates,
+  security patches, performance checks and the next release, on a retainer
+  sized to the product. Includes uptime and error monitoring around the clock
+  and an on-call engineer who already knows the code.
+
+Claims cleared for publication: working software every two weeks, one working
+day reply time, senior people with no account layer, on-call after launch.
 
 ## Audience
 
