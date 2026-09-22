@@ -19,7 +19,7 @@ title: Software design, development and AI automation
       </div>
     </div>
   </div>
-  <img src="{{ '/assets/plates/panorama.webp' | relative_url }}" alt="" width="2560" height="1173" fetchpriority="high" decoding="async" class="pointer-events-none mt-10 h-[260px] w-full object-cover object-[72%_100%] sm:h-[340px] lg:absolute lg:inset-x-0 lg:bottom-0 lg:z-0 lg:mt-0 lg:h-[704px] lg:object-bottom">
+  <img src="{{ '/assets/plates/panorama.webp' | relative_url }}" alt="" width="2560" height="1173" fetchpriority="high" decoding="async" class="pointer-events-none mt-6 h-[260px] w-full object-cover object-[100%_100%] sm:h-[340px] sm:object-[72%_100%] lg:absolute lg:inset-x-0 lg:bottom-0 lg:z-0 lg:mt-0 lg:h-[704px] lg:object-bottom">
 </section>
 
 <!-- Services: the gear, laid out. -->
@@ -79,10 +79,10 @@ title: Software design, development and AI automation
         <dt class="font-label text-label text-brand-bright uppercase md:col-span-3 md:pt-1">Application stack</dt>
         <dd class="md:col-span-9">
           <ul class="{{ tools }}">
-            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/rails.svg %}</span><span class="text-body-sm font-semibold">Ruby on Rails</span></li>
-            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/react.svg %}</span><span class="text-body-sm font-semibold">React</span></li>
-            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/react-native.svg %}</span><span class="text-body-sm font-semibold">React Native</span></li>
-            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/elixir.svg %}</span><span class="text-body-sm font-semibold">Elixir</span></li>
+            <li class="{{ tool }}"><span>{% include logos/rails.svg %}</span><span class="text-body-sm font-semibold">Ruby on Rails</span></li>
+            <li class="{{ tool }}"><span>{% include logos/react.svg %}</span><span class="text-body-sm font-semibold">React</span></li>
+            <li class="{{ tool }}"><span>{% include logos/react-native.svg %}</span><span class="text-body-sm font-semibold">React Native</span></li>
+            <li class="{{ tool }}"><span>{% include logos/elixir.svg %}</span><span class="text-body-sm font-semibold">Elixir</span></li>
           </ul>
         </dd>
       </div>
@@ -90,10 +90,10 @@ title: Software design, development and AI automation
         <dt class="font-label text-label text-brand-bright uppercase md:col-span-3 md:pt-1">Cloud + hosting</dt>
         <dd class="md:col-span-9">
           <ul class="{{ tools }}">
-            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/flyio.svg %}</span><span class="text-body-sm font-semibold">Fly.io</span></li>
-            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/aws.svg %}</span><span class="text-body-sm font-semibold">AWS</span></li>
-            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/azure.svg %}</span><span class="text-body-sm font-semibold">Azure</span></li>
-            <li class="{{ tool }}"><span class="[&>svg]:h-8">{% include logos/heroku.svg %}</span><span class="text-body-sm font-semibold">Heroku</span></li>
+            <li class="{{ tool }}"><span>{% include logos/flyio.svg %}</span><span class="text-body-sm font-semibold">Fly.io</span></li>
+            <li class="{{ tool }}"><span>{% include logos/aws.svg %}</span><span class="text-body-sm font-semibold">AWS</span></li>
+            <li class="{{ tool }}"><span>{% include logos/azure.svg %}</span><span class="text-body-sm font-semibold">Azure</span></li>
+            <li class="{{ tool }}"><span>{% include logos/heroku.svg %}</span><span class="text-body-sm font-semibold">Heroku</span></li>
           </ul>
         </dd>
       </div>
@@ -134,30 +134,30 @@ title: Software design, development and AI automation
 {%- assign client = "flex flex-col items-center border-t border-line py-6 text-center md:border-t-0 md:border-l md:py-4 md:px-6 md:first:border-l-0" -%}
 <section id="clients" class="border-t border-line bg-surface-raised">
   <div class="mx-auto grid max-w-[1424px] lg:w-[87.5%] lg:max-w-[1600px] grid-cols-1 gap-x-12 gap-y-12 px-6 py-24 sm:py-32 lg:grid-cols-12 lg:px-0">
-    <div class="lg:col-span-3">
+    <div class="lg:col-span-3 xl:col-span-2">
       <p class="font-label text-label-lg text-brand-bright uppercase">Clients</p>
       <h2 class="mt-2 font-display text-display-lg text-ink">Good company.</h2>
     </div>
-    <ul class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-b md:border-line md:py-6 lg:col-span-9 lg:grid-cols-[1fr_1fr_1fr_auto]">
+    <ul class="grid grid-cols-1 md:grid-cols-3 md:border-t md:border-b md:border-line md:py-6 lg:col-span-9 xl:col-span-10 xl:grid-cols-[1fr_1fr_1fr_auto]">
       <li class="{{ client }}">
-        <span class="h-12 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/parker-palm-springs.svg %}</span>
+        <span class="h-12 max-w-full text-ink [&>svg]:h-full [&>svg]:w-auto [&>svg]:max-w-full">{% include logos/clients/parker-palm-springs.svg %}</span>
         <span class="mt-5 h-0.5 w-6 bg-brand-600" aria-hidden="true"></span>
         <h3 class="mt-4 text-body font-semibold text-ink">Parker Palm Springs</h3>
         <p class="mt-2 font-label text-label text-brand-bright uppercase">Web Application + CMS</p>
       </li>
       <li class="{{ client }}">
-        <span class="h-12 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/ward-village.svg %}</span>
+        <span class="h-12 max-w-full text-ink [&>svg]:h-full [&>svg]:w-auto [&>svg]:max-w-full">{% include logos/clients/ward-village.svg %}</span>
         <span class="mt-5 h-0.5 w-6 bg-brand-600" aria-hidden="true"></span>
         <h3 class="mt-4 text-body font-semibold text-ink">Ward Village</h3>
         <p class="mt-2 font-label text-label text-brand-bright uppercase">Web Application + CMS</p>
       </li>
       <li class="{{ client }}">
-        <span role="img" aria-label="Gramercy Park Hotel" class="block h-12 w-[112px] bg-ink [mask:url('/assets/logos/clients/gramercy-park-hotel.png')_center/contain_no-repeat]"></span>
+        <span class="h-12 max-w-full text-ink [&>svg]:h-full [&>svg]:w-auto [&>svg]:max-w-full">{% include logos/clients/gramercy-park-hotel.svg %}</span>
         <span class="mt-5 h-0.5 w-6 bg-brand-600" aria-hidden="true"></span>
         <h3 class="mt-4 text-body font-semibold text-ink">Gramercy Park Hotel</h3>
         <p class="mt-2 font-label text-label text-brand-bright uppercase">Web Application + CMS</p>
       </li>
-      <li class="mt-8 border border-line bg-surface p-6 md:col-span-3 md:mt-6 lg:col-span-1 lg:mt-0 lg:ml-6 lg:w-64">
+      <li class="mt-8 border border-line bg-surface p-6 md:col-span-3 md:mt-6 xl:col-span-1 xl:mt-0 xl:ml-6 xl:w-64">
         <p class="font-label text-label text-brand-bright uppercase">Next</p>
         <p class="mt-2 text-body text-ink">Have a project in mind?</p>
         <a href="#contact" class="{{ btn }} mt-6 w-full whitespace-nowrap">Start a project</a>

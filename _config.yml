@@ -32,3 +32,10 @@ exclude:
   - package.json
   - package-lock.json
   - vendor
+
+# Social card for every page (jekyll-seo-tag reads page.image).
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/og.jpg

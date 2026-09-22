@@ -12,7 +12,7 @@ to **GitHub Actions**.
 ## Editing
 
 - Site title and description live in `_config.yml`.
-- Pages are Markdown files with front matter; `index.md` is the home page.
+- Pages are Markdown files with front matter; `index.html` is the home page.
 - Layouts live in `_layouts/`.
 - The Tailwind theme (brand colors) lives in `_tailwind/site.css`. It compiles
   to `assets/css/site.css`, which is git-ignored.

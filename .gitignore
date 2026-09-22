@@ -18,3 +18,6 @@ assets/css/site.css
 # Impeccable build-phase state and review captures (session artifacts)
 .impeccable/build/
 .impeccable/review/
+
+# Impeccable design-hook session cache
+.impeccable/hook.cache.json
