@@ -19,7 +19,7 @@ title: Software design, development and AI automation
       </div>
     </div>
   </div>
-  <img src="{{ '/assets/plates/panorama.webp' | relative_url }}" alt="" width="2560" height="1173" fetchpriority="high" decoding="async" class="pointer-events-none mt-10 h-[260px] w-full object-cover object-[72%_100%] sm:h-[340px] lg:absolute lg:inset-x-0 lg:bottom-0 lg:z-0 lg:mt-0 lg:h-[704px] lg:object-bottom">
+  <img src="{{ '/assets/plates/panorama.webp' | relative_url }}" alt="" width="2560" height="1173" fetchpriority="high" decoding="async" class="pointer-events-none mt-6 h-[260px] w-full object-cover object-[100%_100%] sm:h-[340px] sm:object-[72%_100%] lg:absolute lg:inset-x-0 lg:bottom-0 lg:z-0 lg:mt-0 lg:h-[704px] lg:object-bottom">
 </section>
 
 <!-- Services: the gear, laid out. -->
@@ -152,7 +152,7 @@ title: Software design, development and AI automation
         <p class="mt-2 font-label text-label text-brand-bright uppercase">Web Application + CMS</p>
       </li>
       <li class="{{ client }}">
-        <span role="img" aria-label="Gramercy Park Hotel" class="block h-12 w-[112px] bg-ink [mask:url('/assets/logos/clients/gramercy-park-hotel.png')_center/contain_no-repeat]"></span>
+        <span class="h-12 text-ink [&>svg]:h-full [&>svg]:w-auto">{% include logos/clients/gramercy-park-hotel.svg %}</span>
         <span class="mt-5 h-0.5 w-6 bg-brand-600" aria-hidden="true"></span>
         <h3 class="mt-4 text-body font-semibold text-ink">Gramercy Park Hotel</h3>
         <p class="mt-2 font-label text-label text-brand-bright uppercase">Web Application + CMS</p>
