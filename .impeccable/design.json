@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-21T00:00:00Z",
+  "generatedAt": "2026-09-22T01:58:24Z",
   "title": "Design System: Campground",
   "extensions": {
     "colorMeta": {
@@ -116,6 +116,14 @@
       "description": "A section themed night: Night Ground surface, Lantern Bright label, Night Ink headline, Lantern button.",
       "html": "<section class=\"ds-night\"><p class=\"ds-night-label\">Run + improve</p><h2>Sleep at night. We're on watch.</h2><p class=\"ds-night-body\">If something breaks at 3am, it's our pager, not yours.</p><button class=\"ds-night-btn\">Start a project</button></section>",
       "css": ".ds-night { background: #131520; padding: 48px 24px; font-family: Archivo, system-ui, sans-serif; } .ds-night-label { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #caccff; } .ds-night h2 { margin: 8px 0 0; font-family: Arvo, Rockwell, Georgia, serif; font-size: 40px; line-height: 46px; font-weight: 400; letter-spacing: -0.01em; color: #ebeef7; } .ds-night-body { margin: 24px 0 0; font-size: 18px; line-height: 28px; color: #bbbdc6; } .ds-night-btn { display: inline-flex; align-items: center; min-height: 44px; margin-top: 40px; padding: 0 24px; background: #a1a2ec; color: #0d092b; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; } .ds-night-btn:hover { background: #b4b6fa; }"
+    },
+    {
+      "name": "Contact Band",
+      "kind": "custom",
+      "refersTo": "contact-band",
+      "description": "The one Pine-drenched close: white label (Moss fails AA on Pine), white headline and lead, inverse button beside an underlined email link.",
+      "html": "<section class=\"ds-contact\"><p class=\"ds-contact-label\">Contact</p><h2>Have a project in mind? Let's talk it through.</h2><p class=\"ds-contact-body\">Tell us what you're building and where it's stuck. We'll reply within one working day.</p><div class=\"ds-contact-actions\"><button class=\"ds-contact-btn\">Start a project</button><a href=\"#\" class=\"ds-contact-link\">hello@campgrounddd.com</a></div></section>",
+      "css": ".ds-contact { background: #00522a; padding: 48px 24px; font-family: Archivo, system-ui, sans-serif; color: #ffffff; } .ds-contact-label { margin: 0; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 14px; line-height: 20px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #ffffff; } .ds-contact h2 { margin: 8px 0 0; font-family: Arvo, Rockwell, Georgia, serif; font-size: 40px; line-height: 46px; font-weight: 400; letter-spacing: -0.01em; color: #ffffff; } .ds-contact-body { margin: 24px 0 0; max-width: 36rem; font-size: 18px; line-height: 28px; color: #ffffff; } .ds-contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 40px; } .ds-contact-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 24px; background: #ffffff; color: #006636; font-family: 'Archivo Expanded', Archivo, system-ui, sans-serif; font-stretch: 125%; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; } .ds-contact-btn:hover { background: #f0faf3; } .ds-contact-btn:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; } .ds-contact-link { font-size: 16px; line-height: 24px; font-weight: 600; color: #ffffff; text-decoration: underline; text-underline-offset: 4px; } .ds-contact-link:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; }"
     }
   ],
   "narrative": {
@@ -133,7 +141,7 @@
       { "name": "The Moss Is For Labels Rule", "body": "Moss appears on uppercase labels and nowhere else. It is never a fill, never body text, never a button.", "section": "colors" },
       { "name": "The Faint Contour Rule", "body": "The topography field stays under 10% opacity (6% on light, 8% at night) so text reads against a flat surface. It marks a section as ground; it is not a texture to turn up.", "section": "colors" },
       { "name": "The One Band Rule", "body": "Exactly one section per page is drenched in Pine, and it is the close. Everywhere else, Pine is a control or a rule, not a ground.", "section": "colors" },
-      { "name": "The Label First Rule", "body": "Every section and every fact is named by an uppercase Moss label before anything else is said: the label gives the kind, the Arvo line gives the thing. A heading with no label above it is missing its map key.", "section": "typography" },
+      { "name": "The Label First Rule", "body": "Every section and every fact is named by an uppercase Moss label before anything else is said: the label gives the kind, the Arvo line gives the thing. A heading with no label above it is missing its map key. On the Pine contact band the label is white, because Moss fails AA on Pine.", "section": "typography" },
       { "name": "The Lowercase Summit Rule", "body": "The page's single top headline is set in lowercase with no period (\"software that holds up in the field\", \"off the trail\"), matching the lowercase wordmark. Section headlines below it use sentence case.", "section": "typography" },
       { "name": "The Lines Not Shadows Rule", "body": "A panel is separated from its ground by a 1px Line and a surface step. If something in the page flow seems to need a shadow, it needs a border.", "section": "elevation" },
       { "name": "The Two Pixel Rule", "body": "2px on controls, 4px at most, 0 on containers. The design system's own note on the scale is \"use nothing rounder\".", "section": "shapes" }
