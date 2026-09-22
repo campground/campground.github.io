@@ -185,7 +185,7 @@ A restrained light ground with one deep green doing the work, a second brighter 
 - **Label** (700, 12px/16px, 0.12em, uppercase): fact labels, step numbers, button text.
 
 ### Named Rules
-**The Label First Rule.** Every section and every fact is named by an uppercase Moss label before anything else is said: the label gives the kind, the Arvo line gives the thing. A heading with no label above it is missing its map key.
+**The Label First Rule.** Every section and every fact is named by an uppercase Moss label before anything else is said: the label gives the kind, the Arvo line gives the thing. A heading with no label above it is missing its map key. On the Pine contact band the label is white, because Moss fails AA on Pine.
 
 **The Lowercase Summit Rule.** The page's single top headline is set in lowercase with no period ("software that holds up in the field", "off the trail"), matching the lowercase wordmark. Section headlines below it use sentence case.
 
