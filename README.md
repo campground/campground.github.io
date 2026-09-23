@@ -17,6 +17,10 @@ to **GitHub Actions**.
 - The Tailwind theme (brand colors) lives in `_tailwind/site.css`. It compiles
   to `assets/css/site.css`, which is git-ignored.
 - Design context lives in `PRODUCT.md`.
+- Before committing images, compress them losslessly:
+  `bundle exec image_optim <files>` (settings in `.image_optim.yml`). CI
+  (`.github/workflows/images.yml`) fails PRs with images over 256 KB, or 3 MB
+  for the plate masters and mocks that don't ship.
 
 ## Local preview
 
