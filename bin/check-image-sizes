@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Fails if an image is over budget. Used by lefthook (staged files) and CI (all tracked images).
+# Shipped images: 250 KB. Plate masters and mocks (not shipped): 3 MB.
+# Fix by resizing/re-exporting, then `bundle exec image_optim <files>`.
+# Usage: bin/check-image-sizes [files...]   (no args: every tracked image)
+status=0
+if [ $# -eq 0 ]; then
+  set -- $(git ls-files | grep -iE '\.(png|jpe?g|gif|webp|avif|svg)$')
+fi
+for f in "$@"; do
+  case "$f" in
+    assets/plates/*.png|.impeccable/*) limit=3145728 ;;
+    *) limit=262144 ;;
+  esac
+  size=$(wc -c < "$f")
+  if [ "$size" -gt "$limit" ]; then
+    echo "::error file=$f::$((size / 1024)) KB is over the $((limit / 1024)) KB budget"
+    status=1
+  fi
+done
+exit $status

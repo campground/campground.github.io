@@ -12,4 +12,6 @@ group :development do
   gem "image_optim_pack"
   # Git hooks (lefthook.yml): bundle exec lefthook install
   gem "lefthook"
+  # Broken internal links/images in _site (pre-push hook)
+  gem "html-proofer"
 end

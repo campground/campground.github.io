@@ -1,7 +1,29 @@
 # Install once per clone: bundle exec lefthook install
 pre-commit:
+  piped: true # optimize first, then check the optimized size
   commands:
     image_optim:
+      priority: 1
       glob: "*.{png,jpg,jpeg,gif}"
       run: bundle exec image_optim {staged_files}
       stage_fixed: true
+    image_sizes:
+      priority: 2
+      glob: "*.{png,jpg,jpeg,gif,webp,avif,svg}"
+      run: bin/check-image-sizes {staged_files}
+
+pre-push:
+  piped: true # proof the site that was just built
+  commands:
+    build_css:
+      priority: 1
+      run: npm run build:css --silent
+    jekyll_build:
+      priority: 2
+      run: bundle exec jekyll build --quiet
+    html_proofer:
+      priority: 3
+      # External links are skipped: slow and flaky offline.
+      run: bundle exec htmlproofer _site --disable-external
+      env:
+        LANG: en_US.UTF-8 # hooks can inherit a US-ASCII locale; Nokogiri then chokes on UTF-8 pages
