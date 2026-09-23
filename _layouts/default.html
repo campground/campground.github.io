@@ -6,9 +6,6 @@
     {% seo %}
     <link rel="icon" href="{{ '/assets/logos/Campground-Icon-Green.svg' | relative_url }}" type="image/svg+xml">
     <link rel="preload" href="{{ '/assets/fonts/Arvo-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-    {%- if page.url == "/" %}
-    <link rel="preload" href="{{ '/assets/plates/panorama.webp' | relative_url }}" as="image" type="image/webp" fetchpriority="high">
-    {%- endif %}
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   </head>
   <body class="bg-surface text-ink antialiased">
