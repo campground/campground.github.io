@@ -21,3 +21,6 @@ assets/css/site.css
 
 # Impeccable design-hook session cache
 .impeccable/hook.cache.json
+
+# Lighthouse CI local runs
+.lighthouseci/
