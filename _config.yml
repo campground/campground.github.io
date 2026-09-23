@@ -14,7 +14,7 @@ email: hello@campgrounddd.com
 url: https://www.campgrounddd.com
 baseurl: ""
 
-# Both ship with the github-pages gem. jekyll-sitemap also emits robots.txt.
+# Both ship with the github-pages gem. robots.txt is our own (jekyll-sitemap skips its stub).
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

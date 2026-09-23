@@ -1,0 +1,10 @@
+---
+layout: null
+sitemap: false
+---
+# Replaces the Sitemap-only robots.txt jekyll-sitemap would generate. RFC 9309.
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: {{ "/sitemap.xml" | absolute_url }}
