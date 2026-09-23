@@ -10,4 +10,6 @@ gem "webrick"
 group :development do
   gem "image_optim"
   gem "image_optim_pack"
+  # Git hooks (lefthook.yml): bundle exec lefthook install
+  gem "lefthook"
 end
