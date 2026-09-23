@@ -1,6 +1,5 @@
 # Fails a PR that commits an oversized image.
-# Shipped images: 250 KB. Plate masters and mocks (not shipped): 3 MB.
-# Fix by resizing/re-exporting, then `bundle exec image_optim <files>`.
+# Budgets live in bin/check-image-sizes (also run by the lefthook pre-commit hook).
 name: Image sizes
 
 on:
@@ -15,17 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - run: |
-          status=0
-          while IFS= read -r f; do
-            case "$f" in
-              assets/plates/*.png|.impeccable/*) limit=3145728 ;;
-              *) limit=262144 ;;
-            esac
-            size=$(wc -c < "$f")
-            if [ "$size" -gt "$limit" ]; then
-              echo "::error file=$f::$((size / 1024)) KB is over the $((limit / 1024)) KB budget"
-              status=1
-            fi
-          done < <(git ls-files | grep -iE '\.(png|jpe?g|gif|webp|avif|svg)$')
-          exit $status
+      - run: bin/check-image-sizes

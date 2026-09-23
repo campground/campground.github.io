@@ -19,9 +19,12 @@ to **GitHub Actions**.
 - Design context lives in `PRODUCT.md`.
 - Images are compressed losslessly on commit by a lefthook pre-commit hook
   (`lefthook.yml`, settings in `.image_optim.yml`). Without the hook, run
-  `bundle exec image_optim <files>` yourself. CI
-  (`.github/workflows/images.yml`) fails PRs with images over 256 KB, or 3 MB
-  for the plate masters and mocks that don't ship.
+  `bundle exec image_optim <files>` yourself. The same hook then runs
+  `bin/check-image-sizes`, which CI (`.github/workflows/images.yml`) also runs
+  on PRs: images over 256 KB fail, or 3 MB for the plate masters and mocks that
+  don't ship.
+- Before a push, lefthook builds the CSS and the site, then runs html-proofer
+  over `_site` for broken internal links and images (external links are skipped).
 
 ## Local preview
 
@@ -32,7 +35,7 @@ and commit the updated lock.
 
     npm install
     bundle install
-    bundle exec lefthook install # once per clone: image pre-commit hook
+    bundle exec lefthook install # once per clone: pre-commit and pre-push hooks
     npm run watch:css            # in one terminal
     bundle exec jekyll serve     # in another
 
