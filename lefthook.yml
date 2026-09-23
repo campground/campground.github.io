@@ -1,0 +1,7 @@
+# Install once per clone: bundle exec lefthook install
+pre-commit:
+  commands:
+    image_optim:
+      glob: "*.{png,jpg,jpeg,gif}"
+      run: bundle exec image_optim {staged_files}
+      stage_fixed: true

@@ -17,6 +17,11 @@ to **GitHub Actions**.
 - The Tailwind theme (brand colors) lives in `_tailwind/site.css`. It compiles
   to `assets/css/site.css`, which is git-ignored.
 - Design context lives in `PRODUCT.md`.
+- Images are compressed losslessly on commit by a lefthook pre-commit hook
+  (`lefthook.yml`, settings in `.image_optim.yml`). Without the hook, run
+  `bundle exec image_optim <files>` yourself. CI
+  (`.github/workflows/images.yml`) fails PRs with images over 256 KB, or 3 MB
+  for the plate masters and mocks that don't ship.
 
 ## Local preview
 
@@ -27,6 +32,7 @@ and commit the updated lock.
 
     npm install
     bundle install
+    bundle exec lefthook install # once per clone: image pre-commit hook
     npm run watch:css            # in one terminal
     bundle exec jekyll serve     # in another
 

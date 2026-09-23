@@ -1,0 +1,4 @@
+# bundle exec image_optim -r assets
+# Lossless only. WebP isn't handled by image_optim; export plates at final quality.
+skip_missing_workers: true
+svgo: false
