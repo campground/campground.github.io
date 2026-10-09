@@ -52,9 +52,12 @@ welcome; jargon is not.
 
 ## Brand assets
 
-Logos live in `assets/logos/` (PNG). Vector masters (`.ai`, `.eps`) are kept
-outside the repo in `~/Downloads/Campground-Logos`; export SVGs from those
-before launch.
+Logos live in `assets/logos/`. SVGs exist for `Digital` (green, night) and
+`Icon` (green); use those on the site. Everything else is PNG only. Vector
+masters (`.ai`, `.eps`) are kept outside the repo in
+`~/Downloads/Campground-Logos`; export more SVGs from those as needed.
+Illustrations are in `assets/illustrations/`, the topography pattern in
+`assets/patterns/`.
 
 - **Mark:** angular twin-peak mountain — a dark outline peak over lighter
   faceted peaks. Sharp, geometric, no curves.
